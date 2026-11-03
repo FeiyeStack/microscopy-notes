@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>08-荧光与先进光路 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html" class="on">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
+<main><h1>08 荧光与先进光路：从"看见"到"只看见想看的"</h1>
+<blockquote><strong>一句话</strong>：荧光把"标记"变成信号，把"激发"和"发射"在波长上分开；共聚焦、双光子、光片、TIRF 都是在同一个目标上做文章——<strong>只让焦点的光进入探测器</strong>。</blockquote>
+<hr>
+<h2 id="8-1-荧光光路-一进一出">8.1 荧光光路：一进一出</h2>
+<p>``<code> 激发滤光片 → 二向色镜（45°） → 物镜 → 样品 ↓ 发射 相机 ← 发射滤光片 ← 穿过二向色镜 ← 同一物镜收集 </code>``</p>
+<ul><li><strong>斯托克斯位移</strong>：发射波长总比激发长（能量低），差额以热耗散——这是能把两者分开的物理基础；</li><li><strong>二向色镜是长波通</strong>：短于截止全反射（去激发），长于截止全透射（放发射）；</li><li><strong>发射滤光片</strong>再把残余激发散射挡死 → 黑背景、高对比。</li></ul>
+<figure><img src="assets/p30/p30-13m03-epi-path.png" alt="荧光光路" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=783" title="在 B站 打开（搬运视频，可能失效）">P30 13:03</a>。</figcaption>
+</figure>
+<h2 id="8-2-滤光片-干涉而非吸收">8.2 滤光片：干涉而非吸收</h2>
+<p>干涉滤光片靠多层介质膜的相长/相消选波长，比吸收型窄而准。标法 <code>HQ470/40</code> = 中心 470 nm、带宽 40 nm。</p>
+<p>三个滤光片按固定顺序装进一个<strong>立方体（filter cube）</strong>，斜 45° 的那片就是二向色镜——整套东西决定了这台显微镜能看哪些染料。</p>
+<figure><img src="assets/p30/p30-19m14-filter-cube.png" alt="滤光片立方体" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1154" title="在 B站 打开（搬运视频，可能失效）">P30 19:14</a>。</figcaption>
+</figure>
+<p>带宽必须盖住发射谱：用错带宽会丢掉 75% 的光。</p>
+<figure><img src="assets/p30/p30-21m48-bandwidth-match.png" alt="滤光片与荧光谱匹配" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1308" title="在 B站 打开（搬运视频，可能失效）">P30 21:48</a>。吸收峰与发射峰错开一段（斯托克斯位移），红框是发射滤光片的窗口。</figcaption>
+</figure>
+<h2 id="8-3-共聚焦-一个针孔解决所有离焦光">8.3 共聚焦：一个针孔解决所有离焦光</h2>
+<p>宽场把焦平面上下的光一起收进来，离焦光摊成大而暗的盘叠在清晰像上。</p>
+<p>共聚焦 = <strong>点照明 + 点探测</strong>：针孔放在与焦点严格共轭的位置，只有聚焦光能穿过；离焦光在针孔处摊成大斑，绝大部分被挡在探测器外。</p>
+<figure><img src="assets/p34/p34-03m29-widefield-out-of-focus.png" alt="宽场的离焦光" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=209" title="在 B站 打开（搬运视频，可能失效）">P34 03:29</a>。</figcaption>
+</figure>
+<figure><img src="assets/p34/p34-05m27-pinhole-conjugate.png" alt="针孔共轭" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=327" title="在 B站 打开（搬运视频，可能失效）">P34 05:27</a>。</figcaption>
+</figure>
+<p><strong>为什么针孔可以固定不动？</strong> 扫描镜改变入射角 → 物镜把角度换成焦点的平移；发射光原路返回被"解扫描"回轴心。</p>
+<figure><img src="assets/p34/p34-09m06-scanning-descan.png" alt="扫描与解扫描" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=546" title="在 B站 打开（搬运视频，可能失效）">P34 09:06</a>。</figcaption>
+</figure>
+<p>针孔常取 <strong>1 AU</strong>：再小只压窄光切片、信号骤降而横向不再改善。</p>
+<h2 id="8-4-双光子-不用针孔也能做光切">8.4 双光子：不用针孔也能做光切</h2>
+<p>两个红外光子（各带一半能量）在 ~10⁻¹⁵ s 内被同一分子同时吸收，等效一个蓝光子。</p>
+<p>荧光强度 ∝ <strong>I²</strong> → 只有焦点峰值处概率才够 → 激发被"光定位"在焦点，<strong>全程没有离焦激发</strong>，所以不需要针孔。</p>
+<figure><img src="assets/p35/p35-11m16-two-photon-absorb.png" alt="双光子吸收" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=676" title="在 B站 打开（搬运视频，可能失效）">P35 11:16</a>。</figcaption>
+</figure>
+<figure><img src="assets/fig/d7-双光子.png" alt="双光子 I² · 关系图" loading="lazy">
+<figcaption>关系图：高斯光束沿轴 I(z)=1/(1+(z/z_R)²)。单光子激发 ∝ I，双光子 ∝ I²；同样焦距下双光子半高宽只有 0.77 µm，比单光子窄 36%，所以焦外几乎不激发。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=737" title="在 B站 打开（搬运视频，可能失效）">P35 12:17</a>。</figcaption>
+</figure>
+<p>用长波的两个理由：组织在 ~1 µm 附近吸收小；瑞利散射 ∝ λ⁻⁴，波长翻倍散射降一个量级。代价是<strong>高峰值功率</strong>（80 fs / 80 MHz / 峰值 ~150 kW）。</p>
+<h2 id="8-5-光片-照明和探测正交">8.5 光片：照明和探测正交</h2>
+<p>一个物镜只照、一个只看，90° 正交。有效体积 = 照明 PSF × 探测 PSF 的乘积。</p>
+<p>片外不被激发 → 无漂白、无光毒；曝光比 ≈ 样品厚度/片厚，斑马鱼可差 200–300 倍。</p>
+<figure><img src="assets/p36/p36-08m07-orthogonal-arms.png" alt="光片正交光路" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=487" title="在 B站 打开（搬运视频，可能失效）">P36 08:07</a>。</figcaption>
+</figure>
+<h2 id="8-6-TIRF-只照界面-100-nm">8.6 TIRF：只照界面 100 nm</h2>
+<p>光从玻璃射向水/细胞，入射角大于临界角 → 全内反射，水中只有一层<strong>倏逝场</strong>，强度随 z 指数衰减，深度约 <strong>λ/5–λ/10 ≈ 100 nm</strong>。</p>
+<p>只有贴在界面的分子被激发，体相背景几乎为零。</p>
+<figure><img src="assets/p37/p37-05m19-evanescent-decay.png" alt="倏逝波衰减" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="在 B站 打开（搬运视频，可能失效）">P37 05:19</a>。</figcaption>
+</figure>
+<figure><img src="assets/fig/d8-TIRF.png" alt="TIRF 倏逝场 · 关系图" loading="lazy">
+<figcaption>关系图：全内反射时界面外的场按 exp(−z/d) 衰减。临界角 61.4°；入射 62.9° 时 d≈174 nm，加到 70.4° 就只剩 75 nm——角度越陡，照亮的层越薄。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="在 B站 打开（搬运视频，可能失效）">P37 05:19</a>。</figcaption>
+</figure>
+<p>代价：折射率不均会把倏逝场转成散射光，z=0 处约 10% 已是非倏逝分量。</p>
+<hr>
+<h2 id="本章自测">本章自测</h2>
+<ol><li>二向色镜为什么必须放在激发光路里，而不是发射光路里？</li><li>共聚焦的 z 分辨率为什么比宽场好？靠的是什么元件？</li><li>双光子为什么不需要针孔？它的分辨率"限制"又在哪里？</li></ol>
+<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=2015" title="在 B站 打开（搬运视频，可能失效）">P30（33:35）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=1487" title="在 B站 打开（搬运视频，可能失效）">P34（24:47）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=1875" title="在 B站 打开（搬运视频，可能失效）">P35（31:15）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=2007" title="在 B站 打开（搬运视频，可能失效）">P36（33:27）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=2544" title="在 B站 打开（搬运视频，可能失效）">P37（42:24）</a>。</blockquote><div class="pager"><a href="ch07-contrast.html">← 07-对比度四法</a><a href="ch09-superres.html">09-超分辨 →</a></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>

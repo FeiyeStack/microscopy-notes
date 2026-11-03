@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光学显微镜原理</title><style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style></head><body>
+<div class="cover">
+<h1>光学显微镜原理</h1>
+<p class="sub">iBiology Microscopy Series · 图文精读</p>
+<p class="meta">B站 BV1e6Ks6CEaJ · iBiology Microscopy Series 全 70 讲 · 26 小时；
+只留光学与探测器这条线。<br>
+187 张原片截图（720p）· 9 张关系图 · 9 章正文 · 每章 3 道自测</p>
+<div class="cards"><a class="card" href="preface.html"><b>00-前言</b><span>怎么读这本书：路线、速查表、素材说明</span></a><a class="card" href="ch01-light.html"><b>01-光与折射</b><span>折射、透镜公式、焦点为何不是一个点</span></a><a class="card" href="ch02-path.html"><b>02-显微光路与柯勒照明</b><span>光在机器里怎么走，为什么必须柯勒照明</span></a><a class="card" href="ch03-objective.html"><b>03-物镜与像差</b><span>NA 一个数定三件事，以及镜筒上那串字</span></a><a class="card" href="ch04-diffraction.html"><b>04-衍射与点扩散函数</b><span>点不是点，是沙漏形的 PSF</span></a><a class="card" href="ch05-resolution.html"><b>05-分辨率与采样</b><span>一条公式，两个陷阱：衍射极限与混叠</span></a><a class="card" href="ch06-camera.html"><b>06-相机与数字图像</b><span>光学已定，相机只管采信</span></a><a class="card" href="ch07-contrast.html"><b>07-对比度四法</b><span>暗场、相差、偏振、DIC 各自把什么变成明暗</span></a><a class="card" href="ch08-fluorescence.html"><b>08-荧光与先进光路</b><span>共聚焦、双光子、光片、TIRF 的共同目标</span></a><a class="card" href="ch09-superres.html"><b>09-超分辨</b><span>三条路拆 200 nm 天花板</span></a></div>
+<p class="meta" style="margin-top:36px">建议路线：01 → 02 → 03 → 04 → 05 → 06，先把光学与相机打通；
+07–09 是分支，按需要看。每章末尾的自测题，做完再往下。</p>
+<p class="meta" style="margin-top:26px">截图与讲解素材来自
+<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
+（CC BY-NC-ND 3.0），本页为非商业的个人学习整理。</p>
+</div><div id="lb"></div><script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script></body></html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>00-前言 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html" class="on">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
+<main><h1>光学显微镜原理 · 图文学习手册</h1>
+<blockquote>素材：B站 BV1e6Ks6CEaJ（iBiology <em>Microscopy Series</em> 全 70 讲，26 小时）。 本手册只做"光学 + 探测器"这一条线，细胞生物学与荧光探针化学已剔除。 所有截图均从原片按时间点抽取（720p 源），图注里的 <code>Pxx mm:ss</code> 可直接回看。</blockquote>
+<p><strong>关于回看链接</strong>：电子书里的 <code>P9 24:01</code> 这类标记都做成了链接，点开是 B站 原片并定位到该秒。 这条视频是搬运（UP 主重新上传，非官方账号），<strong>链接可能某天失效</strong>——所以每处关键结论都配了原片截图， 图在本地、可以长期引用；链接只是"想看现场时"的补充。</p>
+<hr>
+<h2 id="怎么用-建议路线">怎么用（建议路线）</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>阶段</th><th>读什么</th><th>时间</th><th>你会得到</th></tr></thead><tbody>
+<tr><td>① 打地基</td><td>01 光与折射 → 02 显微光路</td><td>1.5 h</td><td>知道光在机器里怎么走</td></tr>
+<tr><td>② 核心四章</td><td>03 物镜 → 04 衍射与 PSF → 05 分辨率与采样</td><td>3 h</td><td>能自己算分辨率、解释"为什么糊"</td></tr>
+<tr><td>③ 探测器</td><td>06 相机与数字图像</td><td>1.5 h</td><td>会选相机、会算噪声与采样</td></tr>
+<tr><td>④ 分支</td><td>07 对比度四法 → 08 荧光与先进光路 → 09 超分辨</td><td>2.5 h</td><td>知道每种技术的物理代价</td></tr>
+</tbody></table></div>
+<p>每章末尾有 3 道自测题。<strong>先看图、再看文字</strong>——图是证据，文字只是注解。</p>
+<hr>
+<h2 id="九章目录">九章目录</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>章</th><th>一句话</th><th>核心公式/数字</th></tr></thead><tbody>
+<tr><td><a href="ch01-light.html">01 光与折射</a></td><td>折射把球面波重新会聚，焦点其实是个艾里斑</td><td>n=c/v，1/f=1/d_o+1/d_i</td></tr>
+<tr><td><a href="ch02-path.html">02 显微光路与柯勒照明</a></td><td>无限远校正 + 柯勒照明，两条共轭面各管一件事</td><td>M = f_镜筒/f_物镜</td></tr>
+<tr><td><a href="ch03-objective.html">03 物镜与像差</a></td><td>NA 一个数定分辨率/亮度/光锥角</td><td>NA = n·sinα，上限 1.49</td></tr>
+<tr><td><a href="ch04-diffraction.html">04 衍射与点扩散函数</a></td><td>点不是点，是沙漏形的 PSF</td><td>r = 0.61λ/NA，z = 2nλ/NA²</td></tr>
+<tr><td><a href="ch05-resolution.html">05 分辨率与采样</a></td><td>光学定极限，采样定"采不采得到"</td><td>d = 0.61λ/NA，像素 ≤ 0.3λ/NA</td></tr>
+<tr><td><a href="ch06-camera.html">06 相机与数字图像</a></td><td>光学已定，相机只负责采信</td><td>DR = 满阱/读出噪声，SNR = N/√(N+RN²)</td></tr>
+<tr><td><a href="ch07-contrast.html">07 对比度四法</a></td><td>透明样品只改相位，四种办法把它翻译成明暗</td><td>Γ=(n_e−n_o)d</td></tr>
+<tr><td><a href="ch08-fluorescence.html">08 荧光与先进光路</a></td><td>只让焦点的光进探测器</td><td>倏逝场深度 ~100 nm</td></tr>
+<tr><td><a href="ch09-superres.html">09 超分辨</a></td><td>三条路拆 200 nm 天花板</td><td>STED d≈λ/(2NA√(1+I/I_sat))</td></tr>
+</tbody></table></div>
+<hr>
+<h2 id="一页速查">一页速查</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>量</th><th>公式</th><th>备注</th></tr></thead><tbody>
+<tr><td>折射率</td><td>n = c/v</td><td>空气 1 / 水 1.33 / 甘油 1.47 / 油 1.515</td></tr>
+<tr><td>薄透镜</td><td>1/f = 1/d_o + 1/d_i</td><td>M = −d_i/d_o</td></tr>
+<tr><td>数值孔径</td><td>NA = n·sinα</td><td>油镜 ≤ 1.49</td></tr>
+<tr><td>系统放大</td><td>f_镜筒 / f_物镜</td><td>无限远校正</td></tr>
+<tr><td>艾里斑半径</td><td>0.61λ/NA</td><td>横向 PSF 半宽</td></tr>
+<tr><td>横向分辨率</td><td>0.61λ/NA</td><td>瑞利判据</td></tr>
+<tr><td>轴向分辨率</td><td>2nλ/NA²</td><td>比横向差 3–4 倍</td></tr>
+<tr><td>阿贝极限</td><td>λ/(2NA)</td><td>离轴照明可到 λ/NA</td></tr>
+<tr><td>采样</td><td>像素 ≤ 0.3λ/NA</td><td>每单元 2–3 像素</td></tr>
+<tr><td>动态范围</td><td>满阱/读出噪声</td><td>18,000/6 ≈ 3,000（≥12 位）</td></tr>
+<tr><td>信噪比</td><td>N/√(N+RN²)</td><td>曝光×4 → SNR×2</td></tr>
+</tbody></table></div>
+<p><strong>数量级</strong>：普通光学横向 ~200 nm、轴向 ~600 nm；共聚焦横向 ~180 nm；SIM ~100 nm；STED 20–50 nm；PALM/STORM 10–20 nm。</p>
+<hr>
+<h2 id="截图库说明">截图库说明</h2>
+<ul><li>位置：<code>../03-截图/P&amp;lt;编号&amp;gt;-&amp;lt;短名&amp;gt;/</code>，文件名格式 <code>p&amp;lt;编号&amp;gt;-&amp;lt;mm&amp;gt;m&amp;lt;ss&amp;gt;-&amp;lt;slug&amp;gt;.png</code>；</li><li>每讲附带 <code>_sheet.png</code>（6 格联络图），便于快速浏览；</li><li>分辨率：源为 720p 的讲为 1280×720；P2/P5/P7/P16/P17 等原始上传为 640×480，保留原生尺寸不插值；</li><li>清单见 <code>../05-清单.csv</code>。</li></ul>
+<h2 id="已知缺口">已知缺口</h2>
+<ul><li><strong>P12 傅里叶空间、P54 相机原理、P58 反卷积</strong>：B站无 AI 字幕，本手册为这三讲只做截图归档，正文未逐句转写（图注仍标了时间点）。</li><li>其余无字幕分P（P13、P15、P42–P44、P48、P63、P65、P68）属演示或外围，未纳入本手册。</li></ul>
+<h2 id="关系图-不是重画截图-是把关系算出来">关系图（不是重画截图，是把关系算出来）</h2>
+<p>见 <code>../04-原理图/</code>。这些图不是"照着原片描"，而是用几何/衍射公式算出来再画：会聚点、模糊盘半径、凹陷百分比都是脚本的输出，图注里的数字就是脚本打印的值，可以逐条核。</p>
+<div class="table-wrap"><table>
+<thead><tr><th>图</th><th>在哪一章</th><th>它把什么讲清楚了</th></tr></thead><tbody>
+<tr><td><code>d1-NA光锥.png</code></td><td>03 §3.1</td><td>同一个 α，换介质 NA 就变（0.87 → 1.31）</td></tr>
+<tr><td><code>d2-PSF.png</code></td><td>04 §4.5</td><td>同一个点，横向 213 nm、轴向 754 nm</td></tr>
+<tr><td><code>d3-阿贝级次.png</code></td><td>04 §4.6</td><td>β 超过 α 就只剩零级，条纹消失</td></tr>
+<tr><td><code>d4-瑞利判据.png</code></td><td>05 §5.1</td><td>间距从 1.6 d 缩到 0.8 d，凹陷 88% → 0%</td></tr>
+<tr><td><code>d5-无限远光路.png</code></td><td>02 §2.2</td><td>平行光段为什么能随便插滤光片</td></tr>
+<tr><td><code>d6-DIC剪切.png</code></td><td>07 §7.5</td><td>剪切量把斜率变成 ±7% 的明暗</td></tr>
+<tr><td><code>d7-双光子.png</code></td><td>08 §8.4</td><td>∝I² 让激发只发生在焦点</td></tr>
+<tr><td><code>d8-TIRF.png</code></td><td>08 §8.6</td><td>入射角越陡，倏逝层从 174 nm 缩到 75 nm</td></tr>
+<tr><td><code>d9-SIM.png</code></td><td>09 §9.4</td><td>拍频 67 px：高频被搬进通带</td></tr>
+</tbody></table></div>
+<p>脚本在 <code>../_tools/diagrams/</code>，每张一个文件，共用 <code>../_tools/optics_kit.py</code>；改参数重跑即可换数值。早期的彩笔/信息图试画留在 <code>../04-原理图/_lab/</code>，仅作过程存档。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>

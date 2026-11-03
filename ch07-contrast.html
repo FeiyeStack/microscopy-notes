@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>07-对比度四法 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html" class="on">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
+<main><h1>07 对比度四法：让透明的东西现形</h1>
+<blockquote><strong>一句话</strong>：透明样品只改相位、不改振幅，明场下自然"看不见"；暗场、相差、偏振、DIC 是四种把相位/偏振信息翻译成明暗的办法。</blockquote>
+<hr>
+<h2 id="7-1-问题的起点-成像本来就是-干涉">7.1 问题的起点：成像本来就是"干涉"</h2>
+<p>Edward Salmon（UNC）在暗场/相差这一讲结尾给了四条结论，第一条就把事情说透了：</p>
+<blockquote><strong>像是"未衍射光"与"衍射（散射）光"干涉的结果。</strong></blockquote>
+<p>挡住衍射光 → 均匀照明、看不到结构；挡住未衍射光 → 暗场，只剩下衍射级次在像面干涉。透明样品之所以看不见，是因为它只让衍射光"晚到"一点点，两束光叠起来强度几乎没变。</p>
+<figure><img src="assets/p23/p23-04m40-darkfield-stop.png" alt="结论页：成像 = 未衍射光 × 衍射光 的干涉" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=280" title="在 B站 打开（搬运视频，可能失效）">P23 04:40</a>。</figcaption>
+</figure>
+<h2 id="7-2-暗场-只收散射光">7.2 暗场：只收散射光</h2>
+<p>在聚光镜里放一块中心挡板，挡掉零级直射光，只让被样品<strong>散射</strong>的光进入物镜。背景全黑，颗粒像星星一样亮。</p>
+<ul><li>灵敏度极高（可看到 2.5 nm 级颗粒）；</li><li>但<strong>没有相位信息</strong>，厚样品的散射会把细节淹没。</li></ul>
+<h2 id="7-3-相差-把-1-4-波长再挪-1-4">7.3 相差：把 1/4 波长再挪 1/4</h2>
+<p>泽尼克的办法：在物镜后焦面放一块<strong>相位板</strong>，让零级直射光再滞后 1/4λ。原本衍射光比零级落后 1/4λ，合起来就变成 <strong>1/2λ（180°）</strong>——相位差被翻译成强度差。</p>
+<figure><img src="assets/p23/p23-15m11-phase-plate.png" alt="相位板：圆盘 + 环形镀膜" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=911" title="在 B站 打开（搬运视频，可能失效）">P23 15:11</a>。泽尼克最早的做法：一块圆形玻璃盘，在零级光的焦点处镀一层膜。</figcaption>
+</figure>
+<figure><img src="assets/p23/p23-17m30-annulus-matching.png" alt="环形光阑：用环替代针孔" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1050" title="在 B站 打开（搬运视频，可能失效）">P23 17:30</a>。现代相差不用针孔而用<strong>环形光阑</strong>，这样能把照明 NA 提上去：分辨率回到 λ/(NA_obj + NA_cond)。</figcaption>
+</figure>
+<figure><img src="assets/p23/p23-20m13-annulus-align.png" alt="对齐：环径约为物镜 NA 的 50%" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1213" title="在 B站 打开（搬运视频，可能失效）">P23 20:13</a>。光阑环必须与物镜相位环<strong>同心</strong>、直径匹配。</figcaption>
+</figure>
+<h2 id="7-4-偏振-只对双折射有反应">7.4 偏振：只对双折射有反应</h2>
+<p>起偏器 + 正交检偏器 = 消光位，空场全黑。只有<strong>各向异性/双折射</strong>样品才会让光"转个角度"透过来。</p>
+<figure><img src="assets/p25/p25-02m09-polarizer-crossed.png" alt="平面偏振光" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=129" title="在 B站 打开（搬运视频，可能失效）">P25 02:09</a>。电场沿一个方向振动，v = c/n。</figcaption>
+</figure>
+<ul><li>双折射 B = n_e − n_o：纺锤体约 0.0005，方解石 0.17；</li><li>光程差 <strong>Γ = (n_e − n_o)·d</strong>，强度 <strong>∝ sin²2θ · sin²(Γ/2)</strong>，θ=45° 时最亮。</li></ul>
+<figure><img src="assets/p25/p25-16m09-intensity-formula.png" alt="强度公式" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=969" title="在 B站 打开（搬运视频，可能失效）">P25 16:09</a>。检偏器把两束正交波投影到同一方向，它们才能干涉。</figcaption>
+</figure>
+<p>这也是四种模式里<strong>唯一可定量</strong>的（补偿器读数）。</p>
+<h2 id="7-5-DIC-把-斜率-画成明暗">7.5 DIC：把"斜率"画成明暗</h2>
+<p>DIC 用两块 Wollaston 棱镜：</p>
+<ol><li>聚光镜侧的棱镜把一束线偏振光劈成两束正交偏振、<strong>错开一个剪切量</strong>（约为艾里斑半径的 1/2–2/3）；</li><li>两束光过样品时经历不同的光程差；</li><li>物镜侧的共轭棱镜把它们合回一束、干涉；</li><li>加 λ/4 波片（de Sénarmont）给约 90° 偏置 → <strong>灰底</strong>，一侧变亮、一侧变暗。</li></ol>
+<figure><img src="assets/p26/p26-13m50-wollaston-split.png" alt="Wollaston 棱镜分光" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="在 B站 打开（搬运视频，可能失效）">P26 13:50</a>。</figcaption>
+</figure>
+<figure><img src="assets/p26/p26-31m45-quarter-wave-bias.png" alt="偏置与补偿" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=1905" title="在 B站 打开（搬运视频，可能失效）">P26 31:45</a>。两种补偿方式：de Sénarmont 与 Nomarski。</figcaption>
+</figure>
+<figure><img src="assets/fig/d6-DIC剪切.png" alt="DIC 剪切与台阶 · 关系图" loading="lazy">
+<figcaption>关系图：两束正交偏振错开 s=0.25 µm 过样品，光程差 Γ=Δn·s，加 90° 偏置后 I = 0.5+0.5·sin(2πΓ/λ)。Δn=0.05、λ=0.55 µm 时调制只有 ±7%——这正是 DIC 边缘「淡而准」的原因：它显示的是斜率，不是亮度差。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="在 B站 打开（搬运视频，可能失效）">P26 13:50</a>。</figcaption>
+</figure>
+<p>伪 3D 的阴影感就来自"剪切方向固定"：一侧边缘加偏置、另一侧减偏置，于是把<strong>斜率</strong>编码成了明暗。这也是为什么转个方向，同一结构可能就"消失"了。</p>
+<h2 id="7-6-怎么选">7.6 怎么选</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>需求</th><th>选什么</th><th>代价</th></tr></thead><tbody>
+<tr><td>看极弱散射颗粒</td><td>暗场</td><td>无相位信息，厚样品散射淹没细节</td></tr>
+<tr><td>快速看活细胞形态、要量化</td><td>相差</td><td>有光晕、无立体感</td></tr>
+<tr><td>双折射/有序结构（纺锤体、淀粉粒）</td><td>偏振</td><td>只有各向异性有信号，怕应力</td></tr>
+<tr><td>厚样品、要立体感与薄光切</td><td>DIC</td><td>只对剪切方向有对比</td></tr>
+</tbody></table></div>
+<hr>
+<h2 id="本章自测">本章自测</h2>
+<ol><li>相差显微镜里，相位板为什么要把零级光再滞后 90°？如果不加会怎样？</li><li>DIC 的"伪 3D"是怎么产生的？为什么转 90° 后同一结构可能消失？</li><li>偏振模式为什么是四种里唯一可定量的？</li></ol>
+<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=2055" title="在 B站 打开（搬运视频，可能失效）">P23（34:15）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=1661" title="在 B站 打开（搬运视频，可能失效）">P25（27:41）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=2244" title="在 B站 打开（搬运视频，可能失效）">P26（37:24）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=29&t=760" title="在 B站 打开（搬运视频，可能失效）">P29（12:40）</a>。</blockquote><div class="pager"><a href="ch06-camera.html">← 06-相机与数字图像</a><a href="ch08-fluorescence.html">08-荧光与先进光路 →</a></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04-衍射与点扩散函数 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html" class="on">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
+<main><h1>04 衍射与点扩散函数：为什么"点"不是一个点</h1>
+<blockquote><strong>一句话</strong>：光过圆孔必然衍射成"艾里斑"，所以任何点光源在像面上都是一团有形状的光——这就是 PSF；显微镜的笔尖有多粗，分辨率就有多高。</blockquote>
+<hr>
+<h2 id="4-1-这一讲讲什么">4.1 这一讲讲什么</h2>
+<p>Jeff Lichtman（Harvard）先用一张封面页点题：<strong>波光学与衍射极限</strong>。这一讲不教操作，只回答"为什么再好的镜头也看不清 200 nm 以下"。</p>
+<figure><img src="assets/p08/p08-00m24-magnify-not-resolve.png" alt="本讲封面：波光学与衍射极限" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=24" title="在 B站 打开（搬运视频，可能失效）">P8 00:24</a>。</figcaption>
+</figure>
+<h2 id="4-2-针孔相机的悖论">4.2 针孔相机的悖论</h2>
+<p>孔越大 → 几何模糊越大；孔小到接近波长 → 衍射把光散开，反而更糊。<strong>存在一个最佳孔径</strong>——这直接反驳了"越小越清楚"的直觉。</p>
+<figure><img src="assets/p08/p08-09m29-optimum-aperture.png" alt="针孔相机：孔太大或太小都糊" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=569" title="在 B站 打开（搬运视频，可能失效）">P8 09:29</a>。左边是"光线从哪来"，右边是"孔调小到多大时开始出现衍射"。</figcaption>
+</figure>
+<h2 id="4-3-惠更斯-波前上每一点都是新光源">4.3 惠更斯：波前上每一点都是新光源</h2>
+<p>把波前上的每一点看成子波源，各自发球面波，叠加起来就是新的波前。讲者同时讲了相干叠加：同相振幅相加，相差半个波长完全抵消——<strong>这正是艾里斑的环、以及后面共聚焦干涉的共同来源</strong>。</p>
+<figure><img src="assets/p08/p08-18m08-huygens-wavelets.png" alt="惠更斯子波" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1088" title="在 B站 打开（搬运视频，可能失效）">P8 18:08</a>。</figcaption>
+</figure>
+<figure><img src="assets/p08/p08-21m50-coherent-sum.png" alt="相干叠加" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1310" title="在 B站 打开（搬运视频，可能失效）">P8 21:50</a>。"同相 → 振幅相加；反相 → 抵消"。</figcaption>
+</figure>
+<h2 id="4-4-圆孔-艾里斑">4.4 圆孔 → 艾里斑</h2>
+<p>点光源经圆孔/物镜后不是一个点，而是<strong>中央亮斑 + 一圈圈同心暗环</strong>。第一暗环半径：</p>
+<blockquote><strong>r = 0.61 λ / NA</strong></blockquote>
+<figure><img src="assets/p09/p09-24m01-airy-radius-061.png" alt="艾里斑与 0.61λ/NA" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1441" title="在 B站 打开（搬运视频，可能失效）">P9 24:01</a>。这张是整门课最该记住的一页。</figcaption>
+</figure>
+<h2 id="4-5-PSF-显微镜的-笔尖">4.5 PSF：显微镜的"笔尖"</h2>
+<p>把物镜对点光源的响应画成三维，就是一个<strong>沙漏形</strong>的光分布——xy 面是艾里斑，z 向沿轴拉长：</p>
+<blockquote>轴向第一暗点 <strong>z = 2nλ / NA²</strong></blockquote>
+<figure><img src="assets/p09/p09-20m41-psf-xy-xz.png" alt="PSF 的三维形状" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="在 B站 打开（搬运视频，可能失效）">P9 20:41</a>。左：XY 面（艾里斑 + 环）；右：XZ 剖面（沿轴拉长）。</figcaption>
+</figure>
+<p><strong>它有多不对称？</strong> NA 1.4、λ 480 nm 时：横向约 <strong>225 nm</strong>，轴向约 <strong>861 nm</strong>——胖了将近 4 倍。</p>
+<figure><img src="assets/p09/p09-27m01-psf-225-861.png" alt="225 与 861" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1621" title="在 B站 打开（搬运视频，可能失效）">P9 27:01</a>。所以"厚样品糊"通常是 z 的问题，不是横向的问题。</figcaption>
+</figure>
+<figure><img src="assets/fig/d2-PSF.png" alt="PSF 各向异性 · 关系图" loading="lazy">
+<figcaption>关系图：德拜积分直接算出的 PSF。NA 1.4、λ 488 nm 时横向 213 nm、轴向 754 nm，差 3.5 倍。左图是 z=0 的横截面，右图是沿轴的剖面。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="在 B站 打开（搬运视频，可能失效）">P9 20:41</a>。</figcaption>
+</figure>
+<h2 id="4-6-阿贝成像理论-分辨率-收了多少级衍射光">4.6 阿贝成像理论：分辨率 = 收了多少级衍射光</h2>
+<p>Kurt Thorn 用一个光栅做现场演示：样品把光衍射成 0、±1、±2… 级。</p>
+<ul><li>收到 <strong>±1 级</strong> → 像面干涉出条纹；</li><li>只剩 <strong>0 级</strong> → 均匀灰场，条纹消失；</li><li>临界条件 <strong>d = λ/(n·sinα) = λ/NA</strong>。</li></ul>
+<figure><img src="assets/p14/p14-03m37-grating-orders.png" alt="衍射级次被收集" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=217" title="在 B站 打开（搬运视频，可能失效）">P14 03:37</a>。d 越小 β 越大——所以"更细的结构"要求的衍射角更大。</figcaption>
+</figure>
+<figure><img src="assets/p14/p14-06m10-oblique-illumination.png" alt="只剩零级就没有图像" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=370" title="在 B站 打开（搬运视频，可能失效）">P14 06:10</a>。"If β &gt; α, only one spot makes it through → no interference → no image formed"，右下角写着分辨率极限 λ/n·sinα。</figcaption>
+</figure>
+<p>更漂亮的是：<strong>物镜后焦面在物理上就是样品的傅里叶变换面</strong>，越靠外 = 空间频率越高。在后焦面插一块挡板挡掉某方向的级次，像面就丢掉那个方向的结构。</p>
+<figure><img src="assets/p14/p14-13m07-back-focal-plane-ft.png" alt="后焦面 = 傅里叶面" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=787" title="在 B站 打开（搬运视频，可能失效）">P14 13:07</a>。</figcaption>
+</figure>
+<figure><img src="assets/fig/d3-阿贝级次.png" alt="阿贝级次 · 关系图" loading="lazy">
+<figcaption>关系图：同一片物镜孔径（α≈28°），只换光栅周期。左：一级衍射角 β≈16° 收得进来，±1 级在像面会合出条纹；右：β≈44° 超出孔径，只剩零级，像面成了均匀灰场。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=276" title="在 B站 打开（搬运视频，可能失效）">P14 04:36</a>。</figcaption>
+</figure>
+<hr>
+<h2 id="本章自测">本章自测</h2>
+<ol><li>为什么把 40× 换成 100× 物镜，分辨率不一定提高？什么情况下一定提高？</li><li>NA 1.4、λ=488 nm，横向与轴向的分辨率各约多少？为什么两者差这么多？</li><li>用阿贝理论解释：为什么缩小孔径光阑会降低分辨率？</li></ol>
+<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1555" title="在 B站 打开（搬运视频，可能失效）">P8（25:55）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1714" title="在 B站 打开（搬运视频，可能失效）">P9（28:34）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=1221" title="在 B站 打开（搬运视频，可能失效）">P14（20:21）</a>。</blockquote><div class="pager"><a href="ch03-objective.html">← 03-物镜与像差</a><a href="ch05-resolution.html">05-分辨率与采样 →</a></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>

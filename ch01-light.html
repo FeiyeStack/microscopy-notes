@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01-光与折射 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html" class="on">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
+<main><h1>01 光与折射：一切从一条弯折的波前开始</h1>
+<blockquote><strong>一句话</strong>：显微镜做的事，是用折射把从一个点发出的球面波，重新会聚成另一个点；能会聚到多细，取决于波长和透镜收光的张角。</blockquote>
+<hr>
+<h2 id="1-1-先给光定几个量">1.1 先给光定几个量</h2>
+<p>讲者（Daniel Fletcher，UC Berkeley）用一支 2 mW、635 nm 的红激光笔开场，把"光"拆成可以算的数：</p>
+<ul><li><strong>波长 λ</strong>、<strong>振幅</strong>、<strong>频率</strong>、<strong>速度</strong>、<strong>相位</strong>，外加<strong>偏振</strong>（电场振荡的方向）——六个量描述一束波。</li><li><strong>强度 = 功率 / 面积</strong>：2 mW 落在一个小光斑上约 250 W/m²，对应的电场约 430 V/m。</li><li><strong>强度 ∝ 振幅²</strong>：这条后面在衍射、干涉里反复用到。</li></ul>
+<figure><img src="assets/p04/p04-04m04-intensity-laser.png" alt="激光笔的五个参数" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=244" title="在 B站 打开（搬运视频，可能失效）">P4 04:04</a>。看这张图只要记住一件事：波长、振幅、频率、速度、相位是互相锁死的，改一个牵动其它。</figcaption>
+</figure>
+<h2 id="1-2-折射-速度变了-方向就变了">1.2 折射：速度变了，方向就变了</h2>
+<p>光从空气进玻璃，<strong>频率不变、速度变慢、波长按同比例缩短</strong>，于是波前偏折：</p>
+<ul><li>折射率 <strong>n = c / v</strong>（真空光速 / 介质中光速），玻璃 n≈1.5，水 1.33，油 1.515。</li><li><strong>斯涅尔定律 n₁sinθ₁ = n₂sinθ₂</strong>，讲者是从"波前两侧到达同一时刻"几何推出来的，不是背公式。</li><li>垂直入射也有损失：空气/玻璃界面约 <strong>4% 被反射</strong>——这就是为什么荧光成像里镜片越少越好。</li></ul>
+<figure><img src="assets/p04/p04-10m49-refraction-4pct.png" alt="透射与反射" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=649" title="在 B站 打开（搬运视频，可能失效）">P4 10:49</a>。界面上的能量账：透射 + 反射 + 吸收 = 100%，正入射时空气/玻璃约 4% 被反射。折射只给方向，反射才管损失。</figcaption>
+</figure>
+<h2 id="1-3-透镜-把两次弯折变成一次会聚">1.3 透镜：把两次弯折变成一次会聚</h2>
+<p>把两面球面拼起来，光在第一个面被折、在第二个面再折，就成了透镜。讲者现场用"逐面套用折射定律"的方式算出焦距，并给出三个必须记住的关系：</p>
+<ul><li>透镜制造公式：由两面曲率半径 + 折射率决定焦距；</li><li><strong>薄透镜公式 1/f = 1/d_o + 1/d_i</strong>；</li><li><strong>放大率 M = −d_i/d_o</strong>（负号表示倒像）。</li></ul>
+<p>物距大于 f 得实像；小于 f 得<strong>虚像</strong>——放大镜和目镜用的就是虚像。</p>
+<figure><img src="assets/p04/p04-16m16-lens-shape.png" alt="透镜的两面与焦距" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=976" title="在 B站 打开（搬运视频，可能失效）">P4 16:16</a>。这一页是"设计一个透镜"的算法，不是现象描述。</figcaption>
+</figure>
+<h2 id="1-4-三条作图光线-考试常考-实操常忘">1.4 三条作图光线（考试常考，实操常忘）</h2>
+<p>只要会画三条线，任何薄透镜成像都能推出来：</p>
+<ol><li>平行主光轴入射 → 过焦点出射；</li><li>过焦点入射 → 平行主光轴出射；</li><li>过透镜中心 → 不偏折。</li></ol>
+<figure><img src="assets/p04/p04-22m22-ray-tracing.png" alt="三条作图光线" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1342" title="在 B站 打开（搬运视频，可能失效）">P4 22:22</a>。</figcaption>
+</figure>
+<h2 id="1-5-焦点不是一个点">1.5 焦点不是一个点</h2>
+<p>这是整门课的第一个"反转"：几何光学说平行光会聚于一点，但<strong>波动光学说那是一个艾里斑</strong>——中央亮斑加一圈圈暗环。原因下一章展开，这里先记住结论：</p>
+<blockquote>任何"点"在显微镜里都不是点，而是一个有大小、有形状的光斑（PSF）。分辨率的天花板就埋在这里。</blockquote>
+<figure><img src="assets/p04/p04-19m07-aberration-airy.png" alt="像差与艾里斑" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1147" title="在 B站 打开（搬运视频，可能失效）">P4 19:07</a>。</figcaption>
+</figure>
+<h2 id="1-6-折射率依赖频率-色散">1.6 折射率依赖频率 → 色散</h2>
+<p>斯涅尔定律还能用"波前到达时间"推出来：两侧同一时刻到达，要求 D·sinθ 与光速匹配，于是 Δt = l₁/(c/n₁) = l₂/(c/n₂) 直接给出 n₁sinθ₁ = n₂sinθ₂。</p>
+<p>因为 n 随频率变，蓝光折得比红光狠 → <strong>不同颜色的焦点不在同一位置</strong>。棱镜分光、彩虹、以及物镜里那堆玻璃片，都是同一件事的不同后果——这就是复消色差物镜贵的原因。</p>
+<figure><img src="assets/p11/p11-07m33-dispersion.png" alt="用波前推导折射" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=453" title="在 B站 打开（搬运视频，可能失效）">P11 07:33</a>。图中 Δt = l₁/(c/n₁) = l₂/(c/n₂) 与 l = D·sinθ 合起来就是折射定律。</figcaption>
+</figure>
+<hr>
+<h2 id="本章自测">本章自测</h2>
+<ol><li>一束 488 nm 的光从空气（n=1）进入玻璃（n=1.5），频率、速度、波长各变成多少？</li><li>薄透镜 f=10 mm，物在 15 mm 处，像距和放大率是多少？像是实是虚？</li><li>为什么"把图像放大"不等于"看得更细"？用本章的哪个结论可以一句话说清？</li></ol>
+<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=2208" title="在 B站 打开（搬运视频，可能失效）">P4（36:48）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=1420" title="在 B站 打开（搬运视频，可能失效）">P11（23:40）</a>。完整影片见 <a href="../00-课程地图.md">课程地图</a>。</blockquote><div class="pager"><a href="preface.html">← 00-前言</a><a href="ch02-path.html">02-显微光路与柯勒照明 →</a></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>

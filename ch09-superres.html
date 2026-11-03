@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>09-超分辨 · 光学显微镜原理</title>
+<style>
+:root{--ink:#2b3441;--sub:#6b7686;--bg:#faf8f4;--card:#fff;--line:#e4ded3;--accent:#b45309;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 "Noto Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{display:flex;gap:48px;max-width:1180px;margin:0 auto;padding:48px 28px 96px}
+nav{position:sticky;top:32px;align-self:flex-start;width:208px;flex:none;font-size:14px;
+ line-height:1.7;font-family:system-ui,"Microsoft YaHei",sans-serif}
+nav .brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+nav ol{list-style:none;margin:0;padding:0}
+nav li{margin:2px 0}
+nav a{color:var(--sub);text-decoration:none;display:block;padding:3px 8px;border-radius:6px}
+nav a:hover{background:#f0eade;color:var(--ink)}
+nav a.on{background:#efe6d6;color:var(--accent);font-weight:600}
+main{flex:1;min-width:0;max-width:760px}
+h1{font:700 30px/1.35 system-ui,"Microsoft YaHei",sans-serif;letter-spacing:-.01em;
+ margin:0 0 8px;padding-bottom:18px;border-bottom:2px solid var(--line)}
+h2{font:600 21px/1.5 system-ui,"Microsoft YaHei",sans-serif;margin:52px 0 14px;
+ padding-left:12px;border-left:4px solid var(--accent)}
+h3{font:600 17px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px 0 8px}
+p{margin:14px 0}
+blockquote{margin:20px 0;padding:12px 18px;background:#f4efe6;border-left:3px solid #d9c9aa;
+ border-radius:4px;color:#4a5462;font-size:16px}
+ul,ol{margin:14px 0;padding-left:26px}
+li{margin:6px 0}
+code{background:#efe9dd;padding:1px 5px;border-radius:4px;font-size:.9em;
+ font-family:"Cascadia Code",Consolas,monospace}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+figure{margin:26px 0;text-align:center}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;
+ box-shadow:0 2px 10px rgba(60,50,30,.06);cursor:zoom-in}
+figcaption,.cap{font:14px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub);
+ margin-top:10px;text-align:left}
+.cap{text-align:left}
+.table-wrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.65 system-ui,"Microsoft YaHei",sans-serif}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;word-break:normal}
+th{background:#f3ede2;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;
+ border-top:1px solid var(--line);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+.pager a{color:var(--accent);text-decoration:none}
+a.ts{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b892;padding:0 1px}
+a.ts:hover{background:#f6e7d2}
+.pager span{color:#b9c0cc}
+.cover{max-width:760px;margin:0 auto;padding:96px 28px}
+.cover h1{font-size:42px;border:0;padding:0;margin-bottom:10px}
+.cover .sub{color:var(--sub);font-size:17px;margin-bottom:40px}
+.cards{display:grid;gap:12px;margin-top:28px}
+.card{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--line);
+ border-radius:10px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#d9c9aa;transform:translateY(-1px);box-shadow:0 4px 14px rgba(60,50,30,.07)}
+.card b{display:block;font:600 16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+.card span{color:var(--sub);font-size:14px}
+.meta{color:var(--sub);font-size:14px;font-family:system-ui,"Microsoft YaHei",sans-serif}
+#lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
+ justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
+@media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
+ figure img{box-shadow:none}h2{page-break-after:avoid}}
+</style>
+</head><body>
+<div class="wrap">
+<nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html" class="on">09-超分辨</a></li></ol></nav>
+<main><h1>09 超分辨：三条拆天花板的路</h1>
+<blockquote><strong>一句话</strong>：衍射极限 d≈0.61λ/NA 把普通显微镜卡在 ~200 nm；三条路各拆一块砖——<strong>缩激发斑</strong>（STED）、<strong>靠统计定位</strong>（PALM/STORM）、<strong>用条纹把高频搬进通带</strong>（SIM）。</blockquote>
+<hr>
+<h2 id="9-1-先记住天花板">9.1 先记住天花板</h2>
+<p>透镜无法把波聚成几何点，焦斑 ≈ 200 nm；阿贝判据 <strong>d = λ/(2NA)</strong>，低 NA 时可达 300–500 nm。</p>
+<figure><img src="assets/p38/p38-01m45-diffraction-limit.png" alt="衍射极限" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=105" title="在 B站 打开（搬运视频，可能失效）">P38 01:45</a>。</figcaption>
+</figure>
+<h2 id="9-2-STED-用一束-擦除光-把斑缩小">9.2 STED：用一束"擦除光"把斑缩小</h2>
+<ul><li>不缩激发斑，而是在它上面叠一束<strong>红移的环形光</strong>（甜甜圈）；</li><li>受激辐射把外围分子打回基态，只留环心可发光；</li><li>甜甜圈由厚度渐变的相位片整形高斯光得到；</li><li>修正公式 <strong>d ≈ λ / (2NA·√(1+I/I_sat))</strong>——损耗光越强，有效 PSF 越窄，原理上不封顶。</li></ul>
+<figure><img src="assets/p38/p38-12m14-phase-plate.png" alt="STED 光路与甜甜圈" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=734" title="在 B站 打开（搬运视频，可能失效）">P38 12:14</a>。绿色是激发光，红色是环形"擦除光"，两者叠加后只有环心能发荧光；右边同时给出 d ≈ λ/(2n·sinα·√(1+I/I_s))。</figcaption>
+</figure>
+<p>代价是功率：损耗光需 <strong>10⁶ W/cm²</strong>，短波长尤伤样品。</p>
+<h2 id="9-3-PALM-STORM-突破靠统计-不靠光学">9.3 PALM/STORM：突破靠统计，不靠光学</h2>
+<p>单分子像仍是衍射斑（半高宽约 300 nm 级），光学上无法再小；但轮廓已知，可以<strong>拟合质心</strong>：</p>
+<ol><li>弱激活光<strong>稀疏点亮</strong>一小批分子；</li><li>单分子斑拟合质心，定出 xy；</li><li>关闭/漂白，换下一批，累积重建。</li></ol>
+<p>精度 ∝ 1/√N：红染料约 6000 光子 → ~5 nm；理想探针 10⁵ → 1 nm。</p>
+<figure><img src="assets/p39/p39-02m49-sqrt-n-statistics.png" alt="单分子定位" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=169" title="在 B站 打开（搬运视频，可能失效）">P39 02:49</a>。</figcaption>
+</figure>
+<p>实测簇半高宽 <strong>24 nm</strong>，侧向 <strong>10–20 nm</strong>，比衍射极限好一个数量级。三维靠斑形编码 z（柱面透镜），xy 20–30 nm、z 50–70 nm。</p>
+<h2 id="9-4-SIM-莫尔条纹把高频搬进来">9.4 SIM：莫尔条纹把高频搬进来</h2>
+<ul><li>正弦条纹照明与样品结构相乘，产生<strong>更粗的拍频</strong>（莫尔条纹）；</li><li>频域看：条纹是三个点，相乘 = 频谱被平移复制三份，两份本来在通带外；</li><li>每方向 3 张、相位差 120°，代数解出；转 2–3 个方向铺满频域；</li><li>条纹取到截止极限 → 频域扩 2 倍 → 分辨率 <strong>~2×</strong>，约 100 nm。</li></ul>
+<figure><img src="assets/p40/p40-09m24-moire.png" alt="莫尔条纹" loading="lazy">
+<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=564" title="在 B站 打开（搬运视频，可能失效）">P40 09:24</a>。</figcaption>
+</figure>
+<figure><img src="assets/fig/d9-SIM.png" alt="SIM 莫尔 · 关系图" loading="lazy">
+<figcaption>关系图：样品条纹（周期 9 px）乘上照明条纹（10.4 px），拍出周期约 67 px 的粗条纹——粗到能落进通带。右图是频域：照明把频谱平移复制成 0、±k 三份，边上两份本来在通带外。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=687" title="在 B站 打开（搬运视频，可能失效）">P40 11:27</a>。</figcaption>
+</figure>
+<p>线性 SIM 封顶 2×；染料饱和生谐波 = 饱和 SIM，可达 40–50 nm，代价是 8 个方向和强漂白。</p>
+<h2 id="9-5-三者怎么选">9.5 三者怎么选</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>需求</th><th>STED</th><th>PALM/STORM</th><th>SIM</th></tr></thead><tbody>
+<tr><td>分辨率</td><td>20–50 nm</td><td>10–20 nm</td><td>~100 nm</td></tr>
+<tr><td>速度</td><td>快（逐点扫）</td><td>慢（数千帧）</td><td>中（9–15 张/帧）</td></tr>
+<tr><td>光毒</td><td>最高</td><td>最低</td><td>温和</td></tr>
+<tr><td>探针</td><td>需受激辐射染料</td><td>需光切换探针</td><td>普通染料即可</td></tr>
+<tr><td>活细胞</td><td>可以</td><td>勉强</td><td>适合</td></tr>
+</tbody></table></div>
+<hr>
+<h2 id="本章自测">本章自测</h2>
+<ol><li>STED 为什么能突破衍射极限？它没有缩小的"激发斑"为什么仍然有效？</li><li>PALM 的 10 nm 精度来自哪里？为什么不能靠"更小的镜头"实现？</li><li>SIM 的"2 倍"是怎么算出来的？饱和 SIM 又为什么能到 40–50 nm？</li></ol>
+<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=2315" title="在 B站 打开（搬运视频，可能失效）">P38（38:35）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=1638" title="在 B站 打开（搬运视频，可能失效）">P39（27:18）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=1532" title="在 B站 打开（搬运视频，可能失效）">P40（25:32）</a>。</blockquote><div class="pager"><a href="ch08-fluorescence.html">← 08-荧光与先进光路</a><span></span></div></main>
+</div>
+<div id="lb"></div>
+<script>
+document.querySelectorAll('figure img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var lb=document.getElementById('lb');
+    if(!lb){lb=document.createElement('div');lb.id='lb';
+      lb.innerHTML='<img>';document.body.appendChild(lb);
+      lb.addEventListener('click',function(){lb.style.display='none';});}
+    lb.querySelector('img').src=img.src; lb.style.display='flex';
+  });
+});
+</script>
+</body></html>
