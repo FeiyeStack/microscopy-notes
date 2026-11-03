@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -84,50 +87,49 @@ a.ts:hover{background:#f6e7d2}
 <p>讲者（Daniel Fletcher，UC Berkeley）用一支 2 mW、635 nm 的红激光笔开场，把"光"拆成可以算的数：</p>
 <ul><li><strong>波长 λ</strong>、<strong>振幅</strong>、<strong>频率</strong>、<strong>速度</strong>、<strong>相位</strong>，外加<strong>偏振</strong>（电场振荡的方向）——六个量描述一束波。</li><li><strong>强度 = 功率 / 面积</strong>：2 mW 落在一个小光斑上约 250 W/m²，对应的电场约 430 V/m。</li><li><strong>强度 ∝ 振幅²</strong>：这条后面在衍射、干涉里反复用到。</li></ul>
 <figure><img src="assets/p04/p04-04m04-intensity-laser.png" alt="激光笔的五个参数" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=244" title="在 B站 打开（搬运视频，可能失效）">P4 04:04</a>。看这张图只要记住一件事：波长、振幅、频率、速度、相位是互相锁死的，改一个牵动其它。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=244s" title="YouTube 原片，跳到 04:04">P4 04:04</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=244" title="B站 镜像，同一秒">B站</a>。看这张图只要记住一件事：波长、振幅、频率、速度、相位是互相锁死的，改一个牵动其它。</figcaption>
 </figure>
 <h2 id="1-2-折射-速度变了-方向就变了">1.2 折射：速度变了，方向就变了</h2>
 <p>光从空气进玻璃，<strong>频率不变、速度变慢、波长按同比例缩短</strong>，于是波前偏折：</p>
 <ul><li>折射率 <strong>n = c / v</strong>（真空光速 / 介质中光速），玻璃 n≈1.5，水 1.33，油 1.515。</li><li><strong>斯涅尔定律 n₁sinθ₁ = n₂sinθ₂</strong>，讲者是从"波前两侧到达同一时刻"几何推出来的，不是背公式。</li><li>垂直入射也有损失：空气/玻璃界面约 <strong>4% 被反射</strong>——这就是为什么荧光成像里镜片越少越好。</li></ul>
 <figure><img src="assets/p04/p04-10m49-refraction-4pct.png" alt="透射与反射" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=649" title="在 B站 打开（搬运视频，可能失效）">P4 10:49</a>。界面上的能量账：透射 + 反射 + 吸收 = 100%，正入射时空气/玻璃约 4% 被反射。折射只给方向，反射才管损失。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=649s" title="YouTube 原片，跳到 10:49">P4 10:49</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=649" title="B站 镜像，同一秒">B站</a>。界面上的能量账：透射 + 反射 + 吸收 = 100%，正入射时空气/玻璃约 4% 被反射。折射只给方向，反射才管损失。</figcaption>
 </figure>
 <h2 id="1-3-透镜-把两次弯折变成一次会聚">1.3 透镜：把两次弯折变成一次会聚</h2>
 <p>把两面球面拼起来，光在第一个面被折、在第二个面再折，就成了透镜。讲者现场用"逐面套用折射定律"的方式算出焦距，并给出三个必须记住的关系：</p>
 <ul><li>透镜制造公式：由两面曲率半径 + 折射率决定焦距；</li><li><strong>薄透镜公式 1/f = 1/d_o + 1/d_i</strong>；</li><li><strong>放大率 M = −d_i/d_o</strong>（负号表示倒像）。</li></ul>
 <p>物距大于 f 得实像；小于 f 得<strong>虚像</strong>——放大镜和目镜用的就是虚像。</p>
 <figure><img src="assets/p04/p04-16m16-lens-shape.png" alt="透镜的两面与焦距" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=976" title="在 B站 打开（搬运视频，可能失效）">P4 16:16</a>。这一页是"设计一个透镜"的算法，不是现象描述。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=976s" title="YouTube 原片，跳到 16:16">P4 16:16</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=976" title="B站 镜像，同一秒">B站</a>。这一页是"设计一个透镜"的算法，不是现象描述。</figcaption>
 </figure>
 <h2 id="1-4-三条作图光线-考试常考-实操常忘">1.4 三条作图光线（考试常考，实操常忘）</h2>
 <p>只要会画三条线，任何薄透镜成像都能推出来：</p>
 <ol><li>平行主光轴入射 → 过焦点出射；</li><li>过焦点入射 → 平行主光轴出射；</li><li>过透镜中心 → 不偏折。</li></ol>
 <figure><img src="assets/p04/p04-22m22-ray-tracing.png" alt="三条作图光线" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1342" title="在 B站 打开（搬运视频，可能失效）">P4 22:22</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=1342s" title="YouTube 原片，跳到 22:22">P4 22:22</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1342" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="1-5-焦点不是一个点">1.5 焦点不是一个点</h2>
 <p>这是整门课的第一个"反转"：几何光学说平行光会聚于一点，但<strong>波动光学说那是一个艾里斑</strong>——中央亮斑加一圈圈暗环。原因下一章展开，这里先记住结论：</p>
 <blockquote>任何"点"在显微镜里都不是点，而是一个有大小、有形状的光斑（PSF）。分辨率的天花板就埋在这里。</blockquote>
 <figure><img src="assets/p04/p04-19m07-aberration-airy.png" alt="像差与艾里斑" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1147" title="在 B站 打开（搬运视频，可能失效）">P4 19:07</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=1147s" title="YouTube 原片，跳到 19:07">P4 19:07</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=1147" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="1-6-折射率依赖频率-色散">1.6 折射率依赖频率 → 色散</h2>
 <p>斯涅尔定律还能用"波前到达时间"推出来：两侧同一时刻到达，要求 D·sinθ 与光速匹配，于是 Δt = l₁/(c/n₁) = l₂/(c/n₂) 直接给出 n₁sinθ₁ = n₂sinθ₂。</p>
 <p>因为 n 随频率变，蓝光折得比红光狠 → <strong>不同颜色的焦点不在同一位置</strong>。棱镜分光、彩虹、以及物镜里那堆玻璃片，都是同一件事的不同后果——这就是复消色差物镜贵的原因。</p>
 <figure><img src="assets/p11/p11-07m33-dispersion.png" alt="用波前推导折射" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=453" title="在 B站 打开（搬运视频，可能失效）">P11 07:33</a>。图中 Δt = l₁/(c/n₁) = l₂/(c/n₂) 与 l = D·sinθ 合起来就是折射定律。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=VzThe929HrU&t=453s" title="YouTube 原片，跳到 07:33">P11 07:33</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=453" title="B站 镜像，同一秒">B站</a>。图中 Δt = l₁/(c/n₁) = l₂/(c/n₂) 与 l = D·sinθ 合起来就是折射定律。</figcaption>
 </figure>
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>一束 488 nm 的光从空气（n=1）进入玻璃（n=1.5），频率、速度、波长各变成多少？</li><li>薄透镜 f=10 mm，物在 15 mm 处，像距和放大率是多少？像是实是虚？</li><li>为什么"把图像放大"不等于"看得更细"？用本章的哪个结论可以一句话说清？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=2208" title="在 B站 打开（搬运视频，可能失效）">P4（36:48）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=1420" title="在 B站 打开（搬运视频，可能失效）">P11（23:40）</a>。完整影片见 <a href="../00-课程地图.md">课程地图</a>。</blockquote><div class="pager"><a href="preface.html">← 00-前言</a><a href="ch02-path.html">02-显微光路与柯勒照明 →</a></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=vlxMSz7XRys&t=2208s" title="YouTube 原片，跳到 36:48">P4（36:48）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=4&t=2208" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=VzThe929HrU&t=1420s" title="YouTube 原片，跳到 23:40">P11（23:40）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=11&t=1420" title="B站 镜像，同一秒">B站</a>。完整影片见 <a href="../00-课程地图.md">课程地图</a>。</blockquote><div class="pager"><a href="preface.html">← 00-前言</a><a href="ch02-path.html">02-显微光路与柯勒照明 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

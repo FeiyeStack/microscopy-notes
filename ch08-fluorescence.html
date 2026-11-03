@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -84,69 +87,68 @@ a.ts:hover{background:#f6e7d2}
 <p>``<code> 激发滤光片 → 二向色镜（45°） → 物镜 → 样品 ↓ 发射 相机 ← 发射滤光片 ← 穿过二向色镜 ← 同一物镜收集 </code>``</p>
 <ul><li><strong>斯托克斯位移</strong>：发射波长总比激发长（能量低），差额以热耗散——这是能把两者分开的物理基础；</li><li><strong>二向色镜是长波通</strong>：短于截止全反射（去激发），长于截止全透射（放发射）；</li><li><strong>发射滤光片</strong>再把残余激发散射挡死 → 黑背景、高对比。</li></ul>
 <figure><img src="assets/p30/p30-13m03-epi-path.png" alt="荧光光路" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=783" title="在 B站 打开（搬运视频，可能失效）">P30 13:03</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=AhzhOzgYoqw&t=783s" title="YouTube 原片，跳到 13:03">P30 13:03</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=783" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="8-2-滤光片-干涉而非吸收">8.2 滤光片：干涉而非吸收</h2>
 <p>干涉滤光片靠多层介质膜的相长/相消选波长，比吸收型窄而准。标法 <code>HQ470/40</code> = 中心 470 nm、带宽 40 nm。</p>
 <p>三个滤光片按固定顺序装进一个<strong>立方体（filter cube）</strong>，斜 45° 的那片就是二向色镜——整套东西决定了这台显微镜能看哪些染料。</p>
 <figure><img src="assets/p30/p30-19m14-filter-cube.png" alt="滤光片立方体" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1154" title="在 B站 打开（搬运视频，可能失效）">P30 19:14</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=AhzhOzgYoqw&t=1154s" title="YouTube 原片，跳到 19:14">P30 19:14</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1154" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>带宽必须盖住发射谱：用错带宽会丢掉 75% 的光。</p>
 <figure><img src="assets/p30/p30-21m48-bandwidth-match.png" alt="滤光片与荧光谱匹配" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1308" title="在 B站 打开（搬运视频，可能失效）">P30 21:48</a>。吸收峰与发射峰错开一段（斯托克斯位移），红框是发射滤光片的窗口。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=AhzhOzgYoqw&t=1308s" title="YouTube 原片，跳到 21:48">P30 21:48</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=1308" title="B站 镜像，同一秒">B站</a>。吸收峰与发射峰错开一段（斯托克斯位移），红框是发射滤光片的窗口。</figcaption>
 </figure>
 <h2 id="8-3-共聚焦-一个针孔解决所有离焦光">8.3 共聚焦：一个针孔解决所有离焦光</h2>
 <p>宽场把焦平面上下的光一起收进来，离焦光摊成大而暗的盘叠在清晰像上。</p>
 <p>共聚焦 = <strong>点照明 + 点探测</strong>：针孔放在与焦点严格共轭的位置，只有聚焦光能穿过；离焦光在针孔处摊成大斑，绝大部分被挡在探测器外。</p>
 <figure><img src="assets/p34/p34-03m29-widefield-out-of-focus.png" alt="宽场的离焦光" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=209" title="在 B站 打开（搬运视频，可能失效）">P34 03:29</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=1Q5V442V7xI&t=209s" title="YouTube 原片，跳到 03:29">P34 03:29</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=209" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/p34/p34-05m27-pinhole-conjugate.png" alt="针孔共轭" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=327" title="在 B站 打开（搬运视频，可能失效）">P34 05:27</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=1Q5V442V7xI&t=327s" title="YouTube 原片，跳到 05:27">P34 05:27</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=327" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p><strong>为什么针孔可以固定不动？</strong> 扫描镜改变入射角 → 物镜把角度换成焦点的平移；发射光原路返回被"解扫描"回轴心。</p>
 <figure><img src="assets/p34/p34-09m06-scanning-descan.png" alt="扫描与解扫描" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=546" title="在 B站 打开（搬运视频，可能失效）">P34 09:06</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=1Q5V442V7xI&t=546s" title="YouTube 原片，跳到 09:06">P34 09:06</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=546" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>针孔常取 <strong>1 AU</strong>：再小只压窄光切片、信号骤降而横向不再改善。</p>
 <h2 id="8-4-双光子-不用针孔也能做光切">8.4 双光子：不用针孔也能做光切</h2>
 <p>两个红外光子（各带一半能量）在 ~10⁻¹⁵ s 内被同一分子同时吸收，等效一个蓝光子。</p>
 <p>荧光强度 ∝ <strong>I²</strong> → 只有焦点峰值处概率才够 → 激发被"光定位"在焦点，<strong>全程没有离焦激发</strong>，所以不需要针孔。</p>
 <figure><img src="assets/p35/p35-11m16-two-photon-absorb.png" alt="双光子吸收" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=676" title="在 B站 打开（搬运视频，可能失效）">P35 11:16</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=CZifB2aQDDM&t=676s" title="YouTube 原片，跳到 11:16">P35 11:16</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=676" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/fig/d7-双光子.png" alt="双光子 I² · 关系图" loading="lazy">
-<figcaption>关系图：高斯光束沿轴 I(z)=1/(1+(z/z_R)²)。单光子激发 ∝ I，双光子 ∝ I²；同样焦距下双光子半高宽只有 0.77 µm，比单光子窄 36%，所以焦外几乎不激发。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=737" title="在 B站 打开（搬运视频，可能失效）">P35 12:17</a>。</figcaption>
+<figcaption>关系图：高斯光束沿轴 I(z)=1/(1+(z/z_R)²)。单光子激发 ∝ I，双光子 ∝ I²；同样焦距下双光子半高宽只有 0.77 µm，比单光子窄 36%，所以焦外几乎不激发。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=CZifB2aQDDM&t=737s" title="YouTube 原片，跳到 12:17">P35 12:17</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=737" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>用长波的两个理由：组织在 ~1 µm 附近吸收小；瑞利散射 ∝ λ⁻⁴，波长翻倍散射降一个量级。代价是<strong>高峰值功率</strong>（80 fs / 80 MHz / 峰值 ~150 kW）。</p>
 <h2 id="8-5-光片-照明和探测正交">8.5 光片：照明和探测正交</h2>
 <p>一个物镜只照、一个只看，90° 正交。有效体积 = 照明 PSF × 探测 PSF 的乘积。</p>
 <p>片外不被激发 → 无漂白、无光毒；曝光比 ≈ 样品厚度/片厚，斑马鱼可差 200–300 倍。</p>
 <figure><img src="assets/p36/p36-08m07-orthogonal-arms.png" alt="光片正交光路" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=487" title="在 B站 打开（搬运视频，可能失效）">P36 08:07</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=lteywF6wKu8&t=487s" title="YouTube 原片，跳到 08:07">P36 08:07</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=487" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="8-6-TIRF-只照界面-100-nm">8.6 TIRF：只照界面 100 nm</h2>
 <p>光从玻璃射向水/细胞，入射角大于临界角 → 全内反射，水中只有一层<strong>倏逝场</strong>，强度随 z 指数衰减，深度约 <strong>λ/5–λ/10 ≈ 100 nm</strong>。</p>
 <p>只有贴在界面的分子被激发，体相背景几乎为零。</p>
 <figure><img src="assets/p37/p37-05m19-evanescent-decay.png" alt="倏逝波衰减" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="在 B站 打开（搬运视频，可能失效）">P37 05:19</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=egmJIalDR48&t=319s" title="YouTube 原片，跳到 05:19">P37 05:19</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/fig/d8-TIRF.png" alt="TIRF 倏逝场 · 关系图" loading="lazy">
-<figcaption>关系图：全内反射时界面外的场按 exp(−z/d) 衰减。临界角 61.4°；入射 62.9° 时 d≈174 nm，加到 70.4° 就只剩 75 nm——角度越陡，照亮的层越薄。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="在 B站 打开（搬运视频，可能失效）">P37 05:19</a>。</figcaption>
+<figcaption>关系图：全内反射时界面外的场按 exp(−z/d) 衰减。临界角 61.4°；入射 62.9° 时 d≈174 nm，加到 70.4° 就只剩 75 nm——角度越陡，照亮的层越薄。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=egmJIalDR48&t=319s" title="YouTube 原片，跳到 05:19">P37 05:19</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=319" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>代价：折射率不均会把倏逝场转成散射光，z=0 处约 10% 已是非倏逝分量。</p>
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>二向色镜为什么必须放在激发光路里，而不是发射光路里？</li><li>共聚焦的 z 分辨率为什么比宽场好？靠的是什么元件？</li><li>双光子为什么不需要针孔？它的分辨率"限制"又在哪里？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=2015" title="在 B站 打开（搬运视频，可能失效）">P30（33:35）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=1487" title="在 B站 打开（搬运视频，可能失效）">P34（24:47）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=1875" title="在 B站 打开（搬运视频，可能失效）">P35（31:15）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=2007" title="在 B站 打开（搬运视频，可能失效）">P36（33:27）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=2544" title="在 B站 打开（搬运视频，可能失效）">P37（42:24）</a>。</blockquote><div class="pager"><a href="ch07-contrast.html">← 07-对比度四法</a><a href="ch09-superres.html">09-超分辨 →</a></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=AhzhOzgYoqw&t=2015s" title="YouTube 原片，跳到 33:35">P30（33:35）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=30&t=2015" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=1Q5V442V7xI&t=1487s" title="YouTube 原片，跳到 24:47">P34（24:47）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=34&t=1487" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=CZifB2aQDDM&t=1875s" title="YouTube 原片，跳到 31:15">P35（31:15）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=35&t=1875" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=lteywF6wKu8&t=2007s" title="YouTube 原片，跳到 33:27">P36（33:27）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=36&t=2007" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=egmJIalDR48&t=2544s" title="YouTube 原片，跳到 42:24">P37（42:24）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=37&t=2544" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch07-contrast.html">← 07-对比度四法</a><a href="ch09-superres.html">09-超分辨 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -83,12 +86,12 @@ a.ts:hover{background:#f6e7d2}
 <h2 id="9-1-先记住天花板">9.1 先记住天花板</h2>
 <p>透镜无法把波聚成几何点，焦斑 ≈ 200 nm；阿贝判据 <strong>d = λ/(2NA)</strong>，低 NA 时可达 300–500 nm。</p>
 <figure><img src="assets/p38/p38-01m45-diffraction-limit.png" alt="衍射极限" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=105" title="在 B站 打开（搬运视频，可能失效）">P38 01:45</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=YyBGiZZSslY&t=105s" title="YouTube 原片，跳到 01:45">P38 01:45</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=105" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="9-2-STED-用一束-擦除光-把斑缩小">9.2 STED：用一束"擦除光"把斑缩小</h2>
 <ul><li>不缩激发斑，而是在它上面叠一束<strong>红移的环形光</strong>（甜甜圈）；</li><li>受激辐射把外围分子打回基态，只留环心可发光；</li><li>甜甜圈由厚度渐变的相位片整形高斯光得到；</li><li>修正公式 <strong>d ≈ λ / (2NA·√(1+I/I_sat))</strong>——损耗光越强，有效 PSF 越窄，原理上不封顶。</li></ul>
 <figure><img src="assets/p38/p38-12m14-phase-plate.png" alt="STED 光路与甜甜圈" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=734" title="在 B站 打开（搬运视频，可能失效）">P38 12:14</a>。绿色是激发光，红色是环形"擦除光"，两者叠加后只有环心能发荧光；右边同时给出 d ≈ λ/(2n·sinα·√(1+I/I_s))。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=YyBGiZZSslY&t=734s" title="YouTube 原片，跳到 12:14">P38 12:14</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=734" title="B站 镜像，同一秒">B站</a>。绿色是激发光，红色是环形"擦除光"，两者叠加后只有环心能发荧光；右边同时给出 d ≈ λ/(2n·sinα·√(1+I/I_s))。</figcaption>
 </figure>
 <p>代价是功率：损耗光需 <strong>10⁶ W/cm²</strong>，短波长尤伤样品。</p>
 <h2 id="9-3-PALM-STORM-突破靠统计-不靠光学">9.3 PALM/STORM：突破靠统计，不靠光学</h2>
@@ -96,16 +99,16 @@ a.ts:hover{background:#f6e7d2}
 <ol><li>弱激活光<strong>稀疏点亮</strong>一小批分子；</li><li>单分子斑拟合质心，定出 xy；</li><li>关闭/漂白，换下一批，累积重建。</li></ol>
 <p>精度 ∝ 1/√N：红染料约 6000 光子 → ~5 nm；理想探针 10⁵ → 1 nm。</p>
 <figure><img src="assets/p39/p39-02m49-sqrt-n-statistics.png" alt="单分子定位" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=169" title="在 B站 打开（搬运视频，可能失效）">P39 02:49</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=kkTOBCDZ-Zo&t=169s" title="YouTube 原片，跳到 02:49">P39 02:49</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=169" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>实测簇半高宽 <strong>24 nm</strong>，侧向 <strong>10–20 nm</strong>，比衍射极限好一个数量级。三维靠斑形编码 z（柱面透镜），xy 20–30 nm、z 50–70 nm。</p>
 <h2 id="9-4-SIM-莫尔条纹把高频搬进来">9.4 SIM：莫尔条纹把高频搬进来</h2>
 <ul><li>正弦条纹照明与样品结构相乘，产生<strong>更粗的拍频</strong>（莫尔条纹）；</li><li>频域看：条纹是三个点，相乘 = 频谱被平移复制三份，两份本来在通带外；</li><li>每方向 3 张、相位差 120°，代数解出；转 2–3 个方向铺满频域；</li><li>条纹取到截止极限 → 频域扩 2 倍 → 分辨率 <strong>~2×</strong>，约 100 nm。</li></ul>
 <figure><img src="assets/p40/p40-09m24-moire.png" alt="莫尔条纹" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=564" title="在 B站 打开（搬运视频，可能失效）">P40 09:24</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=i73HhpLJrqs&t=564s" title="YouTube 原片，跳到 09:24">P40 09:24</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=564" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/fig/d9-SIM.png" alt="SIM 莫尔 · 关系图" loading="lazy">
-<figcaption>关系图：样品条纹（周期 9 px）乘上照明条纹（10.4 px），拍出周期约 67 px 的粗条纹——粗到能落进通带。右图是频域：照明把频谱平移复制成 0、±k 三份，边上两份本来在通带外。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=687" title="在 B站 打开（搬运视频，可能失效）">P40 11:27</a>。</figcaption>
+<figcaption>关系图：样品条纹（周期 9 px）乘上照明条纹（10.4 px），拍出周期约 67 px 的粗条纹——粗到能落进通带。右图是频域：照明把频谱平移复制成 0、±k 三份，边上两份本来在通带外。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=i73HhpLJrqs&t=687s" title="YouTube 原片，跳到 11:27">P40 11:27</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=687" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>线性 SIM 封顶 2×；染料饱和生谐波 = 饱和 SIM，可达 40–50 nm，代价是 8 个方向和强漂白。</p>
 <h2 id="9-5-三者怎么选">9.5 三者怎么选</h2>
@@ -120,14 +123,13 @@ a.ts:hover{background:#f6e7d2}
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>STED 为什么能突破衍射极限？它没有缩小的"激发斑"为什么仍然有效？</li><li>PALM 的 10 nm 精度来自哪里？为什么不能靠"更小的镜头"实现？</li><li>SIM 的"2 倍"是怎么算出来的？饱和 SIM 又为什么能到 40–50 nm？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=2315" title="在 B站 打开（搬运视频，可能失效）">P38（38:35）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=1638" title="在 B站 打开（搬运视频，可能失效）">P39（27:18）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=1532" title="在 B站 打开（搬运视频，可能失效）">P40（25:32）</a>。</blockquote><div class="pager"><a href="ch08-fluorescence.html">← 08-荧光与先进光路</a><span></span></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=YyBGiZZSslY&t=2315s" title="YouTube 原片，跳到 38:35">P38（38:35）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=38&t=2315" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=kkTOBCDZ-Zo&t=1638s" title="YouTube 原片，跳到 27:18">P39（27:18）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=39&t=1638" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=i73HhpLJrqs&t=1532s" title="YouTube 原片，跳到 25:32">P40（25:32）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=40&t=1532" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch08-fluorescence.html">← 08-荧光与先进光路</a><span></span></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

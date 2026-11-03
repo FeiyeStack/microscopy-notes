@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -85,7 +88,7 @@ a.ts:hover{background:#f6e7d2}
 <blockquote><strong>像是"未衍射光"与"衍射（散射）光"干涉的结果。</strong></blockquote>
 <p>挡住衍射光 → 均匀照明、看不到结构；挡住未衍射光 → 暗场，只剩下衍射级次在像面干涉。透明样品之所以看不见，是因为它只让衍射光"晚到"一点点，两束光叠起来强度几乎没变。</p>
 <figure><img src="assets/p23/p23-04m40-darkfield-stop.png" alt="结论页：成像 = 未衍射光 × 衍射光 的干涉" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=280" title="在 B站 打开（搬运视频，可能失效）">P23 04:40</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=I4ZQm-CAgL8&t=280s" title="YouTube 原片，跳到 04:40">P23 04:40</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=280" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="7-2-暗场-只收散射光">7.2 暗场：只收散射光</h2>
 <p>在聚光镜里放一块中心挡板，挡掉零级直射光，只让被样品<strong>散射</strong>的光进入物镜。背景全黑，颗粒像星星一样亮。</p>
@@ -93,35 +96,35 @@ a.ts:hover{background:#f6e7d2}
 <h2 id="7-3-相差-把-1-4-波长再挪-1-4">7.3 相差：把 1/4 波长再挪 1/4</h2>
 <p>泽尼克的办法：在物镜后焦面放一块<strong>相位板</strong>，让零级直射光再滞后 1/4λ。原本衍射光比零级落后 1/4λ，合起来就变成 <strong>1/2λ（180°）</strong>——相位差被翻译成强度差。</p>
 <figure><img src="assets/p23/p23-15m11-phase-plate.png" alt="相位板：圆盘 + 环形镀膜" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=911" title="在 B站 打开（搬运视频，可能失效）">P23 15:11</a>。泽尼克最早的做法：一块圆形玻璃盘，在零级光的焦点处镀一层膜。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=I4ZQm-CAgL8&t=911s" title="YouTube 原片，跳到 15:11">P23 15:11</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=911" title="B站 镜像，同一秒">B站</a>。泽尼克最早的做法：一块圆形玻璃盘，在零级光的焦点处镀一层膜。</figcaption>
 </figure>
 <figure><img src="assets/p23/p23-17m30-annulus-matching.png" alt="环形光阑：用环替代针孔" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1050" title="在 B站 打开（搬运视频，可能失效）">P23 17:30</a>。现代相差不用针孔而用<strong>环形光阑</strong>，这样能把照明 NA 提上去：分辨率回到 λ/(NA_obj + NA_cond)。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=I4ZQm-CAgL8&t=1050s" title="YouTube 原片，跳到 17:30">P23 17:30</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1050" title="B站 镜像，同一秒">B站</a>。现代相差不用针孔而用<strong>环形光阑</strong>，这样能把照明 NA 提上去：分辨率回到 λ/(NA_obj + NA_cond)。</figcaption>
 </figure>
 <figure><img src="assets/p23/p23-20m13-annulus-align.png" alt="对齐：环径约为物镜 NA 的 50%" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1213" title="在 B站 打开（搬运视频，可能失效）">P23 20:13</a>。光阑环必须与物镜相位环<strong>同心</strong>、直径匹配。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=I4ZQm-CAgL8&t=1213s" title="YouTube 原片，跳到 20:13">P23 20:13</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=1213" title="B站 镜像，同一秒">B站</a>。光阑环必须与物镜相位环<strong>同心</strong>、直径匹配。</figcaption>
 </figure>
 <h2 id="7-4-偏振-只对双折射有反应">7.4 偏振：只对双折射有反应</h2>
 <p>起偏器 + 正交检偏器 = 消光位，空场全黑。只有<strong>各向异性/双折射</strong>样品才会让光"转个角度"透过来。</p>
 <figure><img src="assets/p25/p25-02m09-polarizer-crossed.png" alt="平面偏振光" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=129" title="在 B站 打开（搬运视频，可能失效）">P25 02:09</a>。电场沿一个方向振动，v = c/n。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=Ph3AdDUG9vI&t=129s" title="YouTube 原片，跳到 02:09">P25 02:09</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=129" title="B站 镜像，同一秒">B站</a>。电场沿一个方向振动，v = c/n。</figcaption>
 </figure>
 <ul><li>双折射 B = n_e − n_o：纺锤体约 0.0005，方解石 0.17；</li><li>光程差 <strong>Γ = (n_e − n_o)·d</strong>，强度 <strong>∝ sin²2θ · sin²(Γ/2)</strong>，θ=45° 时最亮。</li></ul>
 <figure><img src="assets/p25/p25-16m09-intensity-formula.png" alt="强度公式" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=969" title="在 B站 打开（搬运视频，可能失效）">P25 16:09</a>。检偏器把两束正交波投影到同一方向，它们才能干涉。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=Ph3AdDUG9vI&t=969s" title="YouTube 原片，跳到 16:09">P25 16:09</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=969" title="B站 镜像，同一秒">B站</a>。检偏器把两束正交波投影到同一方向，它们才能干涉。</figcaption>
 </figure>
 <p>这也是四种模式里<strong>唯一可定量</strong>的（补偿器读数）。</p>
 <h2 id="7-5-DIC-把-斜率-画成明暗">7.5 DIC：把"斜率"画成明暗</h2>
 <p>DIC 用两块 Wollaston 棱镜：</p>
 <ol><li>聚光镜侧的棱镜把一束线偏振光劈成两束正交偏振、<strong>错开一个剪切量</strong>（约为艾里斑半径的 1/2–2/3）；</li><li>两束光过样品时经历不同的光程差；</li><li>物镜侧的共轭棱镜把它们合回一束、干涉；</li><li>加 λ/4 波片（de Sénarmont）给约 90° 偏置 → <strong>灰底</strong>，一侧变亮、一侧变暗。</li></ol>
 <figure><img src="assets/p26/p26-13m50-wollaston-split.png" alt="Wollaston 棱镜分光" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="在 B站 打开（搬运视频，可能失效）">P26 13:50</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=FUa1GTc69y4&t=830s" title="YouTube 原片，跳到 13:50">P26 13:50</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/p26/p26-31m45-quarter-wave-bias.png" alt="偏置与补偿" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=1905" title="在 B站 打开（搬运视频，可能失效）">P26 31:45</a>。两种补偿方式：de Sénarmont 与 Nomarski。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=FUa1GTc69y4&t=1905s" title="YouTube 原片，跳到 31:45">P26 31:45</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=1905" title="B站 镜像，同一秒">B站</a>。两种补偿方式：de Sénarmont 与 Nomarski。</figcaption>
 </figure>
 <figure><img src="assets/fig/d6-DIC剪切.png" alt="DIC 剪切与台阶 · 关系图" loading="lazy">
-<figcaption>关系图：两束正交偏振错开 s=0.25 µm 过样品，光程差 Γ=Δn·s，加 90° 偏置后 I = 0.5+0.5·sin(2πΓ/λ)。Δn=0.05、λ=0.55 µm 时调制只有 ±7%——这正是 DIC 边缘「淡而准」的原因：它显示的是斜率，不是亮度差。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="在 B站 打开（搬运视频，可能失效）">P26 13:50</a>。</figcaption>
+<figcaption>关系图：两束正交偏振错开 s=0.25 µm 过样品，光程差 Γ=Δn·s，加 90° 偏置后 I = 0.5+0.5·sin(2πΓ/λ)。Δn=0.05、λ=0.55 µm 时调制只有 ±7%——这正是 DIC 边缘「淡而准」的原因：它显示的是斜率，不是亮度差。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=FUa1GTc69y4&t=830s" title="YouTube 原片，跳到 13:50">P26 13:50</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=830" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>伪 3D 的阴影感就来自"剪切方向固定"：一侧边缘加偏置、另一侧减偏置，于是把<strong>斜率</strong>编码成了明暗。这也是为什么转个方向，同一结构可能就"消失"了。</p>
 <h2 id="7-6-怎么选">7.6 怎么选</h2>
@@ -135,14 +138,13 @@ a.ts:hover{background:#f6e7d2}
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>相差显微镜里，相位板为什么要把零级光再滞后 90°？如果不加会怎样？</li><li>DIC 的"伪 3D"是怎么产生的？为什么转 90° 后同一结构可能消失？</li><li>偏振模式为什么是四种里唯一可定量的？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=2055" title="在 B站 打开（搬运视频，可能失效）">P23（34:15）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=1661" title="在 B站 打开（搬运视频，可能失效）">P25（27:41）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=2244" title="在 B站 打开（搬运视频，可能失效）">P26（37:24）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=29&t=760" title="在 B站 打开（搬运视频，可能失效）">P29（12:40）</a>。</blockquote><div class="pager"><a href="ch06-camera.html">← 06-相机与数字图像</a><a href="ch08-fluorescence.html">08-荧光与先进光路 →</a></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=I4ZQm-CAgL8&t=2055s" title="YouTube 原片，跳到 34:15">P23（34:15）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=23&t=2055" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=Ph3AdDUG9vI&t=1661s" title="YouTube 原片，跳到 27:41">P25（27:41）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=25&t=1661" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=FUa1GTc69y4&t=2244s" title="YouTube 原片，跳到 37:24">P26（37:24）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=26&t=2244" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=czFJBtqzlhw&t=760s" title="YouTube 原片，跳到 12:40">P29（12:40）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=29&t=760" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch06-camera.html">← 06-相机与数字图像</a><a href="ch08-fluorescence.html">08-荧光与先进光路 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

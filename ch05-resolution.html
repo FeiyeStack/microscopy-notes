@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -85,10 +88,10 @@ a.ts:hover{background:#f6e7d2}
 <blockquote><strong>d = 0.61 λ / NA</strong></blockquote>
 <p>注意这时两峰之间的强度凹陷只有约 <strong>6%</strong>——已经是硬撑了。</p>
 <figure><img src="assets/p10/p10-03m00-airy-overlap.png" alt="瑞利判据" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=180" title="在 B站 打开（搬运视频，可能失效）">P10 03:00</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=180s" title="YouTube 原片，跳到 03:00">P10 03:00</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=180" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/fig/d4-瑞利判据.png" alt="瑞利判据 · 关系图" loading="lazy">
-<figcaption>关系图：两条艾里斑强度曲线叠加。间距从 1.6 d 减到 1.0 d，中间凹陷从 88% 掉到 21%；再缩到 0.8 d 就完全没有凹陷，两团并成一个。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=180" title="在 B站 打开（搬运视频，可能失效）">P10 03:00</a>。</figcaption>
+<figcaption>关系图：两条艾里斑强度曲线叠加。间距从 1.6 d 减到 1.0 d，中间凹陷从 88% 掉到 21%；再缩到 0.8 d 就完全没有凹陷，两团并成一个。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=180s" title="YouTube 原片，跳到 03:00">P10 03:00</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=180" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p>轴向同理：</p>
 <blockquote><strong>d_z = 2nλ / NA²</strong>，凹陷约 21.9%</blockquote>
@@ -98,33 +101,32 @@ a.ts:hover{background:#f6e7d2}
 <p>这是最反直觉的一条。讲者拍了一组 138、114、90、66、42、18 nm 的荧光微球：<strong>图像尺寸几乎一样</strong>，只有亮度在降。</p>
 <p>所以"我图里这个点只有 50 nm"——从尺寸上根本推不出来。</p>
 <figure><img src="assets/p10/p10-06m21-below-limit-dimmer.png" alt="低于极限只会变暗" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=381" title="在 B站 打开（搬运视频，可能失效）">P10 06:21</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=381s" title="YouTube 原片，跳到 06:21">P10 06:21</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=381" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="5-4-奈奎斯特-一个可分辨单元至少-2-个像素">5.4 奈奎斯特：一个可分辨单元至少 2 个像素</h2>
 <blockquote>像素在样品面的尺寸 <strong>≤ 0.3λ/NA</strong>，工程上取 <strong>2–3 像素/分辨单元</strong>。</blockquote>
 <p>算一遍就懂：</p>
 <ul><li>6.5 µm 像素 + 100× 物镜 → <strong>65 nm/像素</strong>；</li><li>NA 1.4、480 nm 的分辨率约 229 nm → 需要 ≈110 nm/像素；</li><li>65 nm 属于<strong>过采样</strong>（不坏，只是浪费视场）；</li><li>60× + 12 µm 像素 → 200 nm/像素 → <strong>欠采样</strong>。</li></ul>
 <figure><img src="assets/p10/p10-15m35-nyquist-pixel.png" alt="奈奎斯特与像素" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=935" title="在 B站 打开（搬运视频，可能失效）">P10 15:35</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=935s" title="YouTube 原片，跳到 15:35">P10 15:35</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=935" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="5-5-欠采样的真面目-混叠">5.5 欠采样的真面目：混叠</h2>
 <p>欠采样不是"模糊"，而是<strong>混叠（aliasing）</strong>：细条纹被采成假的棋盘纹、斜纹。讲者用一张斑马图演示——随着采样率提高，假的"棋盘格"才一层层消失。</p>
 <p>在科研图像里这最危险：你会以为那个周期性结构是真的。</p>
 <figure><img src="assets/p10/p10-16m15-undersampling-100x.png" alt="欠采样与换 100×" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=975" title="在 B站 打开（搬运视频，可能失效）">P10 16:15</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=975s" title="YouTube 原片，跳到 16:15">P10 16:15</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=975" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <p><strong>记住</strong>：换 100× 主要改善的是<strong>采样</strong>，不是分辨率（分辨率由 NA 和 λ 决定）。</p>
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>NA 1.3、λ 550 nm，横向分辨率是多少？想要 2 像素/单元，像素应多大？</li><li>为什么"图像看起来更大了"不代表"信息更多了"？</li><li>一张图里出现规则的棋盘状纹理，可能是光学问题还是采样问题？怎么验证？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=1247" title="在 B站 打开（搬运视频，可能失效）">P10（20:47）</a>。</blockquote><div class="pager"><a href="ch04-diffraction.html">← 04-衍射与点扩散函数</a><a href="ch06-camera.html">06-相机与数字图像 →</a></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=n2asdncMYMo&t=1247s" title="YouTube 原片，跳到 20:47">P10（20:47）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=10&t=1247" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch04-diffraction.html">← 04-衍射与点扩散函数</a><a href="ch06-camera.html">06-相机与数字图像 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

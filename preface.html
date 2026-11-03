@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -150,16 +153,15 @@ a.ts:hover{background:#f6e7d2}
 <tr><td><strong>官方视频</strong></td><td>iBiology 自己的 YouTube 频道（逐讲发布，带字幕与讲稿）</td><td>&lt;https://www.youtube.com/@scicommlab&gt;</td></tr>
 <tr><td><strong>国内观看</strong></td><td>B站 搬运合辑，70 个分P</td><td>&lt;https://www.bilibili.com/video/BV1e6Ks6CEaJ&gt;</td></tr>
 </tbody></table></div>
-<p><strong>本书做了什么</strong>：按讲次抓帧、抓 AI 中文字幕，重新组织成 9 章中文笔记，并自己画了 9 张原理图。关于"素材从哪来"，说准确一点：</p>
-<ul><li><strong>画面属于 iBiology 原片</strong>。每一章开头都列了该章用到的讲次在 iBiology 的官方页（含讲稿与时间轴），YouTube 频道同步发布同一版本；</li><li><strong>抓帧的实际通道是 B站 镜像</strong>。官方视频文件（<code>media.ibiology.org</code>）与 YouTube 在境内都无法直连，所以截图是从国内可访问的 B站 搬运版逐帧取出的——内容与官方一致，只是通道不同；</li><li><strong>图注里的秒数按 B站 版本标定</strong>，点开直接跳到那一秒；官方讲稿时间轴与之通常差 0–2 秒，属于转码偏移；</li><li><strong>若官方源恢复可达</strong>，同一套脚本（<code>_tools/extract_frames.py</code>）换源即可重抓，不必重写笔记；</li><li><strong>B站 那条是搬运，随时可能下架</strong>：链接失效后，书里的截图与结论不受影响。</li></ul>
-<p>权利归属不变：截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构、9 张关系图为本次整理所作，非商业使用。如果版权方认为这里的使用方式不合适，告知即可删除，不必争论。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div>
+<p><strong>本书做了什么</strong>：按讲次抓帧、抓 AI 中文字幕，重新组织成 9 章中文笔记，并自己画了 9 张原理图。素材来源说准确一点：</p>
+<ul><li><strong>截图取自 iBiology 的官方视频</strong>（YouTube 频道逐讲发布的 720p 版），逐讲按时间点抽帧；抓的是原片，没有 B站 的烧录中文字幕；</li><li><strong>每章开头列出该章讲次在 iBiology 的官方页</strong>，含英文讲稿与时间轴，可对照原话；</li><li><strong>图注里的秒数默认链到 YouTube 原片</strong>（<code>?t=</code> 直接跳秒），后面跟一个小小的「B站」按钮，切换到国内镜像的同一秒；</li><li><strong>B站 镜像与官方同版本</strong>：实测 36 讲时长逐一对齐（误差 0 秒），所以秒数两边通用；镜像随时可能下架，下架后 YouTube 链接照常；</li><li><strong>唯一例外</strong>：第 07 章的 P25（偏振）前 3 张图，YouTube 版与镜像版的剪辑顺序不同（同一讲，前半段差了几分钟），这三张仍取自镜像，其余 34 讲全部来自原片；</li><li>两者都不可达时，书里的截图与结论仍然完整——那才是这本书的主体。</li></ul>
+<p>权利归属：截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构、9 张关系图为本次整理所作，非商业使用。如果版权方认为这里的使用方式不合适，告知即可删除，不必争论。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -83,67 +86,66 @@ a.ts:hover{background:#f6e7d2}
 <h2 id="4-1-这一讲讲什么">4.1 这一讲讲什么</h2>
 <p>Jeff Lichtman（Harvard）先用一张封面页点题：<strong>波光学与衍射极限</strong>。这一讲不教操作，只回答"为什么再好的镜头也看不清 200 nm 以下"。</p>
 <figure><img src="assets/p08/p08-00m24-magnify-not-resolve.png" alt="本讲封面：波光学与衍射极限" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=24" title="在 B站 打开（搬运视频，可能失效）">P8 00:24</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=V8JXPqDWFcM&t=24s" title="YouTube 原片，跳到 00:24">P8 00:24</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=24" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="4-2-针孔相机的悖论">4.2 针孔相机的悖论</h2>
 <p>孔越大 → 几何模糊越大；孔小到接近波长 → 衍射把光散开，反而更糊。<strong>存在一个最佳孔径</strong>——这直接反驳了"越小越清楚"的直觉。</p>
 <figure><img src="assets/p08/p08-09m29-optimum-aperture.png" alt="针孔相机：孔太大或太小都糊" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=569" title="在 B站 打开（搬运视频，可能失效）">P8 09:29</a>。左边是"光线从哪来"，右边是"孔调小到多大时开始出现衍射"。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=V8JXPqDWFcM&t=569s" title="YouTube 原片，跳到 09:29">P8 09:29</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=569" title="B站 镜像，同一秒">B站</a>。左边是"光线从哪来"，右边是"孔调小到多大时开始出现衍射"。</figcaption>
 </figure>
 <h2 id="4-3-惠更斯-波前上每一点都是新光源">4.3 惠更斯：波前上每一点都是新光源</h2>
 <p>把波前上的每一点看成子波源，各自发球面波，叠加起来就是新的波前。讲者同时讲了相干叠加：同相振幅相加，相差半个波长完全抵消——<strong>这正是艾里斑的环、以及后面共聚焦干涉的共同来源</strong>。</p>
 <figure><img src="assets/p08/p08-18m08-huygens-wavelets.png" alt="惠更斯子波" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1088" title="在 B站 打开（搬运视频，可能失效）">P8 18:08</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=V8JXPqDWFcM&t=1088s" title="YouTube 原片，跳到 18:08">P8 18:08</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1088" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/p08/p08-21m50-coherent-sum.png" alt="相干叠加" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1310" title="在 B站 打开（搬运视频，可能失效）">P8 21:50</a>。"同相 → 振幅相加；反相 → 抵消"。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=V8JXPqDWFcM&t=1310s" title="YouTube 原片，跳到 21:50">P8 21:50</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1310" title="B站 镜像，同一秒">B站</a>。"同相 → 振幅相加；反相 → 抵消"。</figcaption>
 </figure>
 <h2 id="4-4-圆孔-艾里斑">4.4 圆孔 → 艾里斑</h2>
 <p>点光源经圆孔/物镜后不是一个点，而是<strong>中央亮斑 + 一圈圈同心暗环</strong>。第一暗环半径：</p>
 <blockquote><strong>r = 0.61 λ / NA</strong></blockquote>
 <figure><img src="assets/p09/p09-24m01-airy-radius-061.png" alt="艾里斑与 0.61λ/NA" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1441" title="在 B站 打开（搬运视频，可能失效）">P9 24:01</a>。这张是整门课最该记住的一页。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=JQy94K94nL0&t=1441s" title="YouTube 原片，跳到 24:01">P9 24:01</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1441" title="B站 镜像，同一秒">B站</a>。这张是整门课最该记住的一页。</figcaption>
 </figure>
 <h2 id="4-5-PSF-显微镜的-笔尖">4.5 PSF：显微镜的"笔尖"</h2>
 <p>把物镜对点光源的响应画成三维，就是一个<strong>沙漏形</strong>的光分布——xy 面是艾里斑，z 向沿轴拉长：</p>
 <blockquote>轴向第一暗点 <strong>z = 2nλ / NA²</strong></blockquote>
 <figure><img src="assets/p09/p09-20m41-psf-xy-xz.png" alt="PSF 的三维形状" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="在 B站 打开（搬运视频，可能失效）">P9 20:41</a>。左：XY 面（艾里斑 + 环）；右：XZ 剖面（沿轴拉长）。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=JQy94K94nL0&t=1241s" title="YouTube 原片，跳到 20:41">P9 20:41</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="B站 镜像，同一秒">B站</a>。左：XY 面（艾里斑 + 环）；右：XZ 剖面（沿轴拉长）。</figcaption>
 </figure>
 <p><strong>它有多不对称？</strong> NA 1.4、λ 480 nm 时：横向约 <strong>225 nm</strong>，轴向约 <strong>861 nm</strong>——胖了将近 4 倍。</p>
 <figure><img src="assets/p09/p09-27m01-psf-225-861.png" alt="225 与 861" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1621" title="在 B站 打开（搬运视频，可能失效）">P9 27:01</a>。所以"厚样品糊"通常是 z 的问题，不是横向的问题。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=JQy94K94nL0&t=1621s" title="YouTube 原片，跳到 27:01">P9 27:01</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1621" title="B站 镜像，同一秒">B站</a>。所以"厚样品糊"通常是 z 的问题，不是横向的问题。</figcaption>
 </figure>
 <figure><img src="assets/fig/d2-PSF.png" alt="PSF 各向异性 · 关系图" loading="lazy">
-<figcaption>关系图：德拜积分直接算出的 PSF。NA 1.4、λ 488 nm 时横向 213 nm、轴向 754 nm，差 3.5 倍。左图是 z=0 的横截面，右图是沿轴的剖面。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="在 B站 打开（搬运视频，可能失效）">P9 20:41</a>。</figcaption>
+<figcaption>关系图：德拜积分直接算出的 PSF。NA 1.4、λ 488 nm 时横向 213 nm、轴向 754 nm，差 3.5 倍。左图是 z=0 的横截面，右图是沿轴的剖面。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=JQy94K94nL0&t=1241s" title="YouTube 原片，跳到 20:41">P9 20:41</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1241" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="4-6-阿贝成像理论-分辨率-收了多少级衍射光">4.6 阿贝成像理论：分辨率 = 收了多少级衍射光</h2>
 <p>Kurt Thorn 用一个光栅做现场演示：样品把光衍射成 0、±1、±2… 级。</p>
 <ul><li>收到 <strong>±1 级</strong> → 像面干涉出条纹；</li><li>只剩 <strong>0 级</strong> → 均匀灰场，条纹消失；</li><li>临界条件 <strong>d = λ/(n·sinα) = λ/NA</strong>。</li></ul>
 <figure><img src="assets/p14/p14-03m37-grating-orders.png" alt="衍射级次被收集" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=217" title="在 B站 打开（搬运视频，可能失效）">P14 03:37</a>。d 越小 β 越大——所以"更细的结构"要求的衍射角更大。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=d8Tqoo0S6gc&t=217s" title="YouTube 原片，跳到 03:37">P14 03:37</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=217" title="B站 镜像，同一秒">B站</a>。d 越小 β 越大——所以"更细的结构"要求的衍射角更大。</figcaption>
 </figure>
 <figure><img src="assets/p14/p14-06m10-oblique-illumination.png" alt="只剩零级就没有图像" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=370" title="在 B站 打开（搬运视频，可能失效）">P14 06:10</a>。"If β &gt; α, only one spot makes it through → no interference → no image formed"，右下角写着分辨率极限 λ/n·sinα。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=d8Tqoo0S6gc&t=370s" title="YouTube 原片，跳到 06:10">P14 06:10</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=370" title="B站 镜像，同一秒">B站</a>。"If β &gt; α, only one spot makes it through → no interference → no image formed"，右下角写着分辨率极限 λ/n·sinα。</figcaption>
 </figure>
 <p>更漂亮的是：<strong>物镜后焦面在物理上就是样品的傅里叶变换面</strong>，越靠外 = 空间频率越高。在后焦面插一块挡板挡掉某方向的级次，像面就丢掉那个方向的结构。</p>
 <figure><img src="assets/p14/p14-13m07-back-focal-plane-ft.png" alt="后焦面 = 傅里叶面" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=787" title="在 B站 打开（搬运视频，可能失效）">P14 13:07</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=d8Tqoo0S6gc&t=787s" title="YouTube 原片，跳到 13:07">P14 13:07</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=787" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/fig/d3-阿贝级次.png" alt="阿贝级次 · 关系图" loading="lazy">
-<figcaption>关系图：同一片物镜孔径（α≈28°），只换光栅周期。左：一级衍射角 β≈16° 收得进来，±1 级在像面会合出条纹；右：β≈44° 超出孔径，只剩零级，像面成了均匀灰场。对应原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=276" title="在 B站 打开（搬运视频，可能失效）">P14 04:36</a>。</figcaption>
+<figcaption>关系图：同一片物镜孔径（α≈28°），只换光栅周期。左：一级衍射角 β≈16° 收得进来，±1 级在像面会合出条纹；右：β≈44° 超出孔径，只剩零级，像面成了均匀灰场。对应原片 <a class="ts" href="https://www.youtube.com/watch?v=d8Tqoo0S6gc&t=276s" title="YouTube 原片，跳到 04:36">P14 04:36</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=276" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>为什么把 40× 换成 100× 物镜，分辨率不一定提高？什么情况下一定提高？</li><li>NA 1.4、λ=488 nm，横向与轴向的分辨率各约多少？为什么两者差这么多？</li><li>用阿贝理论解释：为什么缩小孔径光阑会降低分辨率？</li></ol>
-<blockquote>回看：<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1555" title="在 B站 打开（搬运视频，可能失效）">P8（25:55）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1714" title="在 B站 打开（搬运视频，可能失效）">P9（28:34）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=1221" title="在 B站 打开（搬运视频，可能失效）">P14（20:21）</a>。</blockquote><div class="pager"><a href="ch03-objective.html">← 03-物镜与像差</a><a href="ch05-resolution.html">05-分辨率与采样 →</a></div>
+<blockquote>回看：<a class="ts" href="https://www.youtube.com/watch?v=V8JXPqDWFcM&t=1555s" title="YouTube 原片，跳到 25:55">P8（25:55）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=8&t=1555" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=JQy94K94nL0&t=1714s" title="YouTube 原片，跳到 28:34">P9（28:34）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=9&t=1714" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=d8Tqoo0S6gc&t=1221s" title="YouTube 原片，跳到 20:21">P14（20:21）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=14&t=1221" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch03-objective.html">← 03-物镜与像差</a><a href="ch05-resolution.html">05-分辨率与采样 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>

@@ -65,6 +65,9 @@ a.ts:hover{background:#f6e7d2}
 .origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
 .origin a:hover{background:#f0e3cf}
 .origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
+a.alt{margin-left:3px;font:11px/1 system-ui,"Microsoft YaHei",sans-serif;color:#8d99a8;
+ text-decoration:none;border:1px solid #ddd5c6;border-radius:3px;padding:1px 3px;vertical-align:1px}
+a.alt:hover{background:#f0e3cf;color:var(--accent)}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -89,63 +92,62 @@ a.ts:hover{background:#f6e7d2}
 <tr><td>代价</td><td>慢、binning 才有速度</td><td>像素间响应不一致（要平场校正）、默认 rolling shutter</td></tr>
 </tbody></table></div>
 <figure><img src="assets/p54/p54-01m30-ccd-structure.png" alt="CCD 结构" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=90" title="在 B站 打开（搬运视频，可能失效）">P54 01:30</a>。注意这一讲<strong>没有中文字幕</strong>，截图是我们能拿到的全部原文依据。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=8WpCov8iYCU&t=90s" title="YouTube 原片，跳到 01:30">P54 01:30</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=90" title="B站 镜像，同一秒">B站</a>。注意这一讲<strong>没有中文字幕</strong>，截图是我们能拿到的全部原文依据。</figcaption>
 </figure>
 <figure><img src="assets/p54/p54-04m20-charge-transfer.png" alt="电荷转移" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=260" title="在 B站 打开（搬运视频，可能失效）">P54 04:20</a>。CCD 的本质是"把电荷搬到一个放大器"，这也是它读出慢、但一致的根源。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=8WpCov8iYCU&t=260s" title="YouTube 原片，跳到 04:20">P54 04:20</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=260" title="B站 镜像，同一秒">B站</a>。CCD 的本质是"把电荷搬到一个放大器"，这也是它读出慢、但一致的根源。</figcaption>
 </figure>
 <figure><img src="assets/p55/p55-23m21-scmos-readout.png" alt="sCMOS" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=1401" title="在 B站 打开（搬运视频，可能失效）">P55 23:21</a>。像素级读出：快、噪声低，但不均匀。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=hzhhGHxP-Jc&t=1401s" title="YouTube 原片，跳到 23:21">P55 23:21</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=1401" title="B站 镜像，同一秒">B站</a>。像素级读出：快、噪声低，但不均匀。</figcaption>
 </figure>
 <h2 id="6-2-五个必须记住的指标">6.2 五个必须记住的指标</h2>
 <ul><li><strong>量子效率 QE</strong>：一个光子产生一个电子的概率。前照式约 <strong>70%</strong>，背照式约 <strong>95%</strong>。</li><li><strong>读出噪声</strong>：每次读出叠加的固定误差，单位 e⁻，读得越快越大。</li><li><strong>满阱容量</strong>：一个像素最多装多少电子，例 <strong>18,000 e⁻</strong>。</li><li><strong>动态范围 = 满阱 / 读出噪声</strong>：18,000/6 ≈ <strong>3,000</strong>，至少需要 <strong>12 位</strong>（4096 级）才能表达。</li><li><strong>增益 gain = 均值/方差</strong>（光子转移曲线），单位 e⁻/ADU，实测可到 0.45。</li></ul>
 <figure><img src="assets/p55/p55-08m20-quantum-efficiency.png" alt="量子效率曲线" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=500" title="在 B站 打开（搬运视频，可能失效）">P55 08:20</a>。前照式在绿光段约 70%，背照式翻转减薄后接近 95%。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=hzhhGHxP-Jc&t=500s" title="YouTube 原片，跳到 08:20">P55 08:20</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=500" title="B站 镜像，同一秒">B站</a>。前照式在绿光段约 70%，背照式翻转减薄后接近 95%。</figcaption>
 </figure>
 <figure><img src="assets/p55/p55-28m03-dynamic-range.png" alt="动态范围" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=1683" title="在 B站 打开（搬运视频，可能失效）">P55 28:03</a>。满阱 18,000 e⁻ ÷ 读出噪声 6 e⁻ ≈ 3,000 级。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=hzhhGHxP-Jc&t=1683s" title="YouTube 原片，跳到 28:03">P55 28:03</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=1683" title="B站 镜像，同一秒">B站</a>。满阱 18,000 e⁻ ÷ 读出噪声 6 e⁻ ≈ 3,000 级。</figcaption>
 </figure>
 <h2 id="6-3-信噪比-为什么-曝光-4-只换来-SNR-2">6.3 信噪比：为什么"曝光×4 只换来 SNR×2"</h2>
 <blockquote><strong>SNR = N / √(N + RN²)</strong></blockquote>
 <ul><li>N 远大于读出噪声平方时，受<strong>散粒噪声</strong>限制，SNR ∝ √N；</li><li>N 小于 RN² 时，受<strong>读出噪声</strong>限制——此时"多拍几张取平均"比"单张长曝光"更划算（长时间曝光会撞上背景与漂白）。</li></ul>
 <figure><img src="assets/p55/p55-15m13-snr-formula.png" alt="SNR 公式" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=913" title="在 B站 打开（搬运视频，可能失效）">P55 15:13</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=hzhhGHxP-Jc&t=913s" title="YouTube 原片，跳到 15:13">P55 15:13</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=913" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="6-4-binning-用分辨率换灵敏度">6.4 binning：用分辨率换灵敏度</h2>
 <p>2×2 binning 把 4 个 6.5 µm 像素的电荷合并成 13 µm 虚拟像素：<strong>SNR ×2</strong>、读出噪声只算一次，但采样变粗。</p>
 <p>只在"弱光 + 不需要分辨率"时用。sCMOS 做 binning 不会再降噪声。</p>
 <figure><img src="assets/p54/p54-15m50-binning.png" alt="binning 的电荷合并" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=950" title="在 B站 打开（搬运视频，可能失效）">P54 15:50</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=8WpCov8iYCU&t=950s" title="YouTube 原片，跳到 15:50">P54 15:50</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=54&t=950" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="6-5-位深-显示器只有-8-位">6.5 位深：显示器只有 8 位</h2>
 <ul><li>8 位 256 级 / 12 位 4096 级 / 16 位 65536 级；</li><li><strong>显示器单色只有 8 位</strong>，16 位图必须做 LUT 重映射才看得出层次；</li><li><strong>位深压缩不可逆</strong>（4096 级压成 8 位，高端全变 255）→ 压缩放在流程最后一步；</li><li>人眼其实只分得清 100–150 级灰。</li></ul>
 <figure><img src="assets/p56/p56-02m24-bit-depth.png" alt="位深与灰度级" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=56&t=144" title="在 B站 打开（搬运视频，可能失效）">P56 02:24</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=SNl3kRBgW10&t=144s" title="YouTube 原片，跳到 02:24">P56 02:24</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=56&t=144" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="6-6-校准-暗场-平场">6.6 校准：暗场 + 平场</h2>
 <ul><li><strong>暗场图</strong>（盖镜头拍）：偏移（约 100 ADU，防负值截断）、暗电流、读出噪声（约 3 ADU）；</li><li><strong>平场图</strong>（均匀荧光片）：视场照明不均可达 <strong>20–30%</strong>，还带坏点；</li><li>校正公式：<strong>I_真 =（I_测 − 暗场）/ 平场</strong>，必须用浮点存。</li></ul>
 <figure><img src="assets/p57/p57-06m12-flatfield.png" alt="平场校正" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=372" title="在 B站 打开（搬运视频，可能失效）">P57 06:12</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=jaY6S1p4i3A&t=372s" title="YouTube 原片，跳到 06:12">P57 06:12</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=372" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <figure><img src="assets/p57/p57-08m20-true-intensity.png" alt="校正流程" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=500" title="在 B站 打开（搬运视频，可能失效）">P57 08:20</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=jaY6S1p4i3A&t=500s" title="YouTube 原片，跳到 08:20">P57 08:20</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=500" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <h2 id="6-7-高速同步-把相机当视频机">6.7 高速同步：把相机当视频机</h2>
 <p>用相机输出的"曝光中"TTL 电平触发 AOTF（µs 换波长）和压电 Z（ms 步进），0.2 µm 步进的双通道 Z 堆栈约 <strong>2 秒</strong>采完，耗时只由曝光时间决定。</p>
 <figure><img src="assets/p61/p61-01m17-ttl-trigger.png" alt="TTL 同步" loading="lazy">
-<figcaption>原片 <a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=61&t=77" title="在 B站 打开（搬运视频，可能失效）">P61 01:17</a>。</figcaption>
+<figcaption>原片 <a class="ts" href="https://www.youtube.com/watch?v=WX8NEY2qlB8&t=77s" title="YouTube 原片，跳到 01:17">P61 01:17</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=61&t=77" title="B站 镜像，同一秒">B站</a>。</figcaption>
 </figure>
 <hr>
 <h2 id="本章自测">本章自测</h2>
 <ol><li>一台相机满阱 18,000 e⁻、读出噪声 6 e⁻，动态范围多少？需要几位 ADC？</li><li>为什么弱光时"多拍平均"可能比"单张长曝光"更划算？</li><li>平场校正为什么必须用浮点存？</li></ol>
-<blockquote>回看：P54（22:57，无字幕）、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=2186" title="在 B站 打开（搬运视频，可能失效）">P55（36:26）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=56&t=1835" title="在 B站 打开（搬运视频，可能失效）">P56（30:35）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=1767" title="在 B站 打开（搬运视频，可能失效）">P57（29:27）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=60&t=1172" title="在 B站 打开（搬运视频，可能失效）">P60（19:32）</a>、<a class="ts" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=61&t=351" title="在 B站 打开（搬运视频，可能失效）">P61（5:51）</a>。</blockquote><div class="pager"><a href="ch05-resolution.html">← 05-分辨率与采样</a><a href="ch07-contrast.html">07-对比度四法 →</a></div>
+<blockquote>回看：P54（22:57，无字幕）、<a class="ts" href="https://www.youtube.com/watch?v=hzhhGHxP-Jc&t=2186s" title="YouTube 原片，跳到 36:26">P55（36:26）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=55&t=2186" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=SNl3kRBgW10&t=1835s" title="YouTube 原片，跳到 30:35">P56（30:35）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=56&t=1835" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=jaY6S1p4i3A&t=1767s" title="YouTube 原片，跳到 29:27">P57（29:27）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=57&t=1767" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=II9oXBUlG1I&t=1172s" title="YouTube 原片，跳到 19:32">P60（19:32）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=60&t=1172" title="B站 镜像，同一秒">B站</a>、<a class="ts" href="https://www.youtube.com/watch?v=WX8NEY2qlB8&t=351s" title="YouTube 原片，跳到 5:51">P61（5:51）</a><a class="alt" href="https://www.bilibili.com/video/BV1e6Ks6CEaJ?p=61&t=351" title="B站 镜像，同一秒">B站</a>。</blockquote><div class="pager"><a href="ch05-resolution.html">← 05-分辨率与采样</a><a href="ch07-contrast.html">07-对比度四法 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
-国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
-<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
-回看链接指向搬运视频，可能失效，以书中截图为准。</p>
-</footer>
+（Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
+本书截图逐帧取自该频道（个别画面因剪辑差异取自镜像，见前言）；国内镜像 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>。</p>
+<p>图注里的时间点默认跳到 YouTube 原片，旁边「B站」按钮切到同一秒。
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p></footer>
 </main>
 </div>
 <div id="lb"></div>
