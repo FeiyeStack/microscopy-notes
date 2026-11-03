@@ -60,6 +60,11 @@ a.ts:hover{background:#f6e7d2}
 #lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
  justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
 #lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+ font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
+.colophon p{margin:6px 0}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
+.colophon a:hover{background:#f6e7d2}
 @media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
 @media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
  figure img{box-shadow:none}h2{page-break-after:avoid}}
@@ -130,7 +135,27 @@ a.ts:hover{background:#f6e7d2}
 <tr><td><code>d8-TIRF.png</code></td><td>08 §8.6</td><td>入射角越陡，倏逝层从 174 nm 缩到 75 nm</td></tr>
 <tr><td><code>d9-SIM.png</code></td><td>09 §9.4</td><td>拍频 67 px：高频被搬进通带</td></tr>
 </tbody></table></div>
-<p>脚本在 <code>../_tools/diagrams/</code>，每张一个文件，共用 <code>../_tools/optics_kit.py</code>；改参数重跑即可换数值。早期的彩笔/信息图试画留在 <code>../04-原理图/_lab/</code>，仅作过程存档。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div></main>
+<p>脚本在 <code>../_tools/diagrams/</code>，每张一个文件，共用 <code>../_tools/optics_kit.py</code>；改参数重跑即可换数值。早期的彩笔/信息图试画留在 <code>../04-原理图/_lab/</code>，仅作过程存档。</p>
+<hr>
+<h2 id="声明-出处-许可与素材来源">声明：出处、许可与素材来源</h2>
+<p>这门课不是我拍的，也不是 UP 主的原创。传播链条有三层，写清楚：</p>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>是谁</th><th>地址</th></tr></thead><tbody>
+<tr><td><strong>原始出品</strong></td><td>iBiology / Science Communication Lab，<em>Microscopy Series</em>（60+ 讲，Ron Vale、Nico Stuurman、Kurt Thorn 主持）</td><td>课程页 &lt;https://www.ibiology.org/online-biology-courses/microscopy-series/&gt;</td></tr>
+<tr><td><strong>官方视频</strong></td><td>iBiology 自己的 YouTube 频道（逐讲发布，带字幕与讲稿）</td><td>&lt;https://www.youtube.com/@scicommlab&gt;</td></tr>
+<tr><td><strong>国内观看</strong></td><td>B站 搬运合辑，70 个分P</td><td>&lt;https://www.bilibili.com/video/BV1e6Ks6CEaJ&gt;</td></tr>
+</tbody></table></div>
+<p><strong>本书做了什么</strong>：从上面第三条（B站 那条搬运视频）按时间点抽帧、抓 AI 中文字幕，重新组织成 9 章中文笔记，并自己画了 9 张原理图。所以：</p>
+<ul><li><strong>截图与视频内容</strong>：版权归 iBiology（CC BY-NC-ND 3.0），本书属非商业的个人学习整理；</li><li><strong>中文解说、章节结构、9 张关系图</strong>：本次整理所作；</li><li><strong>回看链接</strong>：指向 B站 那条视频的对应分P与秒数。它是搬运，<strong>随时可能下架</strong>——下架后链接失效，但书里的截图与结论不受影响；</li><li>若原视频下架，可回到上表第一条/第二条找官方版本，讲次与时间点基本对得上（B站 的分P顺序与官方系列顺序一致）。</li></ul>
+<p>如果版权方认为这里的使用方式不合适，告知即可删除，不必争论。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div>
+<footer class="colophon">
+<p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
+（Science Communication Lab；官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）·
+国内观看：<a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑</a>（70 个分P）</p>
+<p>截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构与 9 张原理图为本次整理所作。
+回看链接指向搬运视频，可能失效，以书中截图为准。</p>
+</footer>
+</main>
 </div>
 <div id="lb"></div>
 <script>

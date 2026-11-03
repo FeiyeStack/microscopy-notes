@@ -58,6 +58,11 @@ a.ts:hover{background:#f6e7d2}
 #lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
  justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
 #lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+ font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
+.colophon p{margin:6px 0}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
+.colophon a:hover{background:#f6e7d2}
 @media(max-width:900px){nav{display:none}.wrap{padding:28px 18px 72px}}
 @media print{nav,.pager{display:none}.wrap{display:block;max-width:none;padding:0}
  figure img{box-shadow:none}h2{page-break-after:avoid}}
@@ -71,9 +76,12 @@ a.ts:hover{background:#f6e7d2}
 <div class="cards"><a class="card" href="preface.html"><b>00-前言</b><span>怎么读这本书：路线、速查表、素材说明</span></a><a class="card" href="ch01-light.html"><b>01-光与折射</b><span>折射、透镜公式、焦点为何不是一个点</span></a><a class="card" href="ch02-path.html"><b>02-显微光路与柯勒照明</b><span>光在机器里怎么走，为什么必须柯勒照明</span></a><a class="card" href="ch03-objective.html"><b>03-物镜与像差</b><span>NA 一个数定三件事，以及镜筒上那串字</span></a><a class="card" href="ch04-diffraction.html"><b>04-衍射与点扩散函数</b><span>点不是点，是沙漏形的 PSF</span></a><a class="card" href="ch05-resolution.html"><b>05-分辨率与采样</b><span>一条公式，两个陷阱：衍射极限与混叠</span></a><a class="card" href="ch06-camera.html"><b>06-相机与数字图像</b><span>光学已定，相机只管采信</span></a><a class="card" href="ch07-contrast.html"><b>07-对比度四法</b><span>暗场、相差、偏振、DIC 各自把什么变成明暗</span></a><a class="card" href="ch08-fluorescence.html"><b>08-荧光与先进光路</b><span>共聚焦、双光子、光片、TIRF 的共同目标</span></a><a class="card" href="ch09-superres.html"><b>09-超分辨</b><span>三条路拆 200 nm 天花板</span></a></div>
 <p class="meta" style="margin-top:36px">建议路线：01 → 02 → 03 → 04 → 05 → 06，先把光学与相机打通；
 07–09 是分支，按需要看。每章末尾的自测题，做完再往下。</p>
-<p class="meta" style="margin-top:26px">截图与讲解素材来自
-<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
-（CC BY-NC-ND 3.0），本页为非商业的个人学习整理。</p>
+<p class="meta" style="margin-top:26px"><b>出处</b>：
+原片为 <a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
+（Science Communication Lab，官方频道 <a href="https://www.youtube.com/@scicommlab">YouTube</a>）；
+国内观看 <a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">B站 搬运合辑（BV1e6Ks6CEaJ）</a>，
+本书的截图与回看链接均取自该视频。<br>
+截图与视频 © iBiology（CC BY-NC-ND 3.0）；中文解说、章节结构与 9 张原理图为本次整理所作，仅供个人学习。</p>
 </div><div id="lb"></div><script>
 document.querySelectorAll('figure img').forEach(function(img){
   img.addEventListener('click', function(){

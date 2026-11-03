@@ -2,15 +2,16 @@
 
 本目录是 `build_pages.py` 生成的静态站，可托管到 Cloudflare Pages / GitHub Pages / Gitee Pages。
 
-## 部署
+## 部署（GitHub Pages）
 
-**Cloudflare Pages（推荐，免费无限带宽）**
+1. 把本目录推到 GitHub 仓库的 `main` 分支；
+2. 仓库 Settings → Pages → Source 选 **Deploy from a branch**，分支 `main`、目录 `/ (root)`；
+3. 等一两分钟，访问 `https://<用户名>.github.io/<仓库名>/`。
 
-- Git 集成：把本仓库推到 GitHub/GitLab，Pages 里选该仓库，Build command 留空，Output directory 填 `/`。
-- 直接上传：`pnpm dlx wrangler pages deploy <不含 .git 的目录> --project-name microscopy-book`。
+同一份产物也能直接放到 Cloudflare Pages（免费且不限带宽）：连接仓库，Build command 留空，Output directory 填 `/`。
 
 ## 素材说明
 
-- 视频与幻灯片截图来自 [iBiology Microscopy Series](https://www.ibiology.org/online-biology-courses/microscopy-series/)，许可 CC BY-NC-ND 3.0；
-- 中文解说、排版、9 张关系图为本次整理所写/所绘；
-- 仅供个人学习，不做商业使用。
+- 原片：[iBiology Microscopy Series](https://www.ibiology.org/online-biology-courses/microscopy-series/)（Science Communication Lab），官方频道 [YouTube](https://www.youtube.com/@scicommlab)；
+- 国内观看：[B站 搬运合辑 BV1e6Ks6CEaJ](https://www.bilibili.com/video/BV1e6Ks6CEaJ)，本书的截图与回看链接均取自该视频；
+- 许可：截图与视频 © iBiology，CC BY-NC-ND 3.0；中文解说、排版、9 张关系图为本次整理所作；仅供个人学习，不做商业使用。
