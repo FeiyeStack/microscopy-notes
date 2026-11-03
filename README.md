@@ -1,12 +1,13 @@
 # 光学显微镜原理 · 图文电子书
 
-本目录是 `build_pages.py` 生成的静态站，可直接托管到 GitHub Pages。
+本目录是 `build_pages.py` 生成的静态站，可托管到 Cloudflare Pages / GitHub Pages / Gitee Pages。
 
-## 部署（三选一）
+## 部署
 
-1. **gh-pages 分支**：`git subtree push --prefix _site origin gh-pages`
-2. **Actions**：在 `.github/workflows/pages.yml` 里构建并 `upload-pages-artifact path: _site`
-3. **仓库根**：把 `_site/` 的内容复制到仓库根后 `git push`。
+**Cloudflare Pages（推荐，免费无限带宽）**
+
+- Git 集成：把本仓库推到 GitHub/GitLab，Pages 里选该仓库，Build command 留空，Output directory 填 `/`。
+- 直接上传：`pnpm dlx wrangler pages deploy <不含 .git 的目录> --project-name microscopy-book`。
 
 ## 素材说明
 
