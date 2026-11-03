@@ -60,6 +60,11 @@ a.ts:hover{background:#f6e7d2}
 #lb{position:fixed;inset:0;background:rgba(20,18,14,.92);display:none;align-items:center;
  justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
 #lb img{max-width:96vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.origin{margin:16px 0 26px;padding:11px 14px;background:#f7f3ea;border:1px solid var(--line);
+ border-radius:8px;font:13px/1.8 system-ui,"Microsoft YaHei",sans-serif;color:#4a5462}
+.origin a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #e0c9a8}
+.origin a:hover{background:#f0e3cf}
+.origin .hint{display:block;margin-top:3px;color:#98a1ae;font-size:12.5px;border:0}
 .colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
  font:13px/1.75 system-ui,"Microsoft YaHei",sans-serif;color:var(--sub)}
 .colophon p{margin:6px 0}
@@ -72,7 +77,7 @@ a.ts:hover{background:#f6e7d2}
 </head><body>
 <div class="wrap">
 <nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html" class="on">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
-<main><h1>08 荧光与先进光路：从"看见"到"只看见想看的"</h1>
+<main><h1>08 荧光与先进光路：从"看见"到"只看见想看的"</h1><div class="origin"><b>原片</b>：<a href="https://www.ibiology.org/talks/fluorescence-microscopy/">P30 Introduction to Fluorescence</a> · <a href="https://www.ibiology.org/talks/confocal-microscopy/">P34 Optical Sectioning and Confocal</a> · <a href="https://www.ibiology.org/talks/two-photon-microscopy/">P35 Two-Photon Microscopy</a> · <a href="https://www.ibiology.org/talks/light-sheet-sectioning/">P36 Light Sheet Sectioning</a> · <a href="https://www.ibiology.org/talks/total-internal-reflection-fluorescence/">P37 TIRF</a><span class="hint">iBiology 官方页，含讲稿与时间轴；国内可直接看下方 B站 镜像</span></div>
 <blockquote><strong>一句话</strong>：荧光把"标记"变成信号，把"激发"和"发射"在波长上分开；共聚焦、双光子、光片、TIRF 都是在同一个目标上做文章——<strong>只让焦点的光进入探测器</strong>。</blockquote>
 <hr>
 <h2 id="8-1-荧光光路-一进一出">8.1 荧光光路：一进一出</h2>
