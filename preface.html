@@ -81,8 +81,8 @@ a.alt:hover{background:#f0e3cf;color:var(--accent)}
 <div class="wrap">
 <nav><div class="brand">光学显微镜原理</div><ol><li><a href="preface.html" class="on">00-前言</a></li><li><a href="ch01-light.html">01-光与折射</a></li><li><a href="ch02-path.html">02-显微光路与柯勒照明</a></li><li><a href="ch03-objective.html">03-物镜与像差</a></li><li><a href="ch04-diffraction.html">04-衍射与点扩散函数</a></li><li><a href="ch05-resolution.html">05-分辨率与采样</a></li><li><a href="ch06-camera.html">06-相机与数字图像</a></li><li><a href="ch07-contrast.html">07-对比度四法</a></li><li><a href="ch08-fluorescence.html">08-荧光与先进光路</a></li><li><a href="ch09-superres.html">09-超分辨</a></li></ol></nav>
 <main><h1>光学显微镜原理 · 图文学习手册</h1>
-<blockquote>素材：B站 BV1e6Ks6CEaJ（iBiology <em>Microscopy Series</em> 全 70 讲，26 小时）。 本手册只做"光学 + 探测器"这一条线，细胞生物学与荧光探针化学已剔除。 所有截图均从原片按时间点抽取（720p 源），图注里的 <code>Pxx mm:ss</code> 可直接回看。</blockquote>
-<p><strong>关于回看链接</strong>：电子书里的 <code>P9 24:01</code> 这类标记都做成了链接，点开是 B站 原片并定位到该秒。 这条视频是搬运（UP 主重新上传，非官方账号），<strong>链接可能某天失效</strong>——所以每处关键结论都配了原片截图， 图在本地、可以长期引用；链接只是"想看现场时"的补充。</p>
+<blockquote>素材：iBiology <em>Microscopy Series</em>（70 讲，26 小时）。原片取自其 <strong>YouTube 官方频道</strong>，国内镜像为 B站 BV1e6Ks6CEaJ。 本手册只做"光学 + 探测器"这条线，细胞生物学与荧光探针化学已剔除。</blockquote>
+<p><strong>关于回看</strong>：图注里的 <code>P9 24:01</code> 是链接——默认跳到 YouTube 原片的那一秒，紧跟的「B站」小按钮切到国内镜像。 两个都打不开也没关系：<strong>书的主体是图和结论，链接只是附带</strong>。出处与许可见文末<a href="#声明-出处-许可与素材来源">声明</a>。</p>
 <hr>
 <h2 id="怎么用-建议路线">怎么用（建议路线）</h2>
 <div class="table-wrap"><table>
@@ -126,7 +126,7 @@ a.alt:hover{background:#f0e3cf;color:var(--accent)}
 <p><strong>数量级</strong>：普通光学横向 ~200 nm、轴向 ~600 nm；共聚焦横向 ~180 nm；SIM ~100 nm；STED 20–50 nm；PALM/STORM 10–20 nm。</p>
 <hr>
 <h2 id="截图库说明">截图库说明</h2>
-<ul><li>位置：<code>../03-截图/P&amp;lt;编号&amp;gt;-&amp;lt;短名&amp;gt;/</code>，文件名格式 <code>p&amp;lt;编号&amp;gt;-&amp;lt;mm&amp;gt;m&amp;lt;ss&amp;gt;-&amp;lt;slug&amp;gt;.png</code>；</li><li>每讲附带 <code>_sheet.png</code>（6 格联络图），便于快速浏览；</li><li>分辨率：源为 720p 的讲为 1280×720；P2/P5/P7/P16/P17 等原始上传为 640×480，保留原生尺寸不插值；</li><li>清单见 <code>../05-清单.csv</code>。</li></ul>
+<ul><li>位置：<code>../03-截图/P&amp;lt;编号&amp;gt;-&amp;lt;短名&amp;gt;/</code>，文件名格式 <code>p&amp;lt;编号&amp;gt;-&amp;lt;mm&amp;gt;m&amp;lt;ss&amp;gt;-&amp;lt;slug&amp;gt;.png</code>；</li><li>每讲附带 <code>_sheet.png</code>（6 格联络图），便于快速浏览；</li><li>分辨率：多数讲次为 1280×720；P5、P7、P34 等原始上传即为 640×480，保留原生尺寸不插值；</li><li>清单见 <code>../05-清单.csv</code>。</li></ul>
 <h2 id="已知缺口">已知缺口</h2>
 <ul><li><strong>P12 傅里叶空间、P54 相机原理、P58 反卷积</strong>：B站无 AI 字幕，本手册为这三讲只做截图归档，正文未逐句转写（图注仍标了时间点）。</li><li>其余无字幕分P（P13、P15、P42–P44、P48、P63、P65、P68）属演示或外围，未纳入本手册。</li></ul>
 <h2 id="关系图-不是重画截图-是把关系算出来">关系图（不是重画截图，是把关系算出来）</h2>
@@ -146,16 +146,21 @@ a.alt:hover{background:#f0e3cf;color:var(--accent)}
 <p>脚本在 <code>../_tools/diagrams/</code>，每张一个文件，共用 <code>../_tools/optics_kit.py</code>；改参数重跑即可换数值。早期的彩笔/信息图试画留在 <code>../04-原理图/_lab/</code>，仅作过程存档。</p>
 <hr>
 <h2 id="声明-出处-许可与素材来源">声明：出处、许可与素材来源</h2>
-<p>这门课不是我拍的，也不是 UP 主的原创。传播链条有三层，写清楚：</p>
+<p><strong>一句话</strong>：这是 iBiology 一门免费课程的<strong>私人学习笔记</strong>——非官方、未授权、不盈利。</p>
+<h3 id="素材的三层">素材的三层</h3>
 <div class="table-wrap"><table>
-<thead><tr><th></th><th>是谁</th><th>地址</th></tr></thead><tbody>
-<tr><td><strong>原始出品</strong></td><td>iBiology / Science Communication Lab，<em>Microscopy Series</em>（60+ 讲，Ron Vale、Nico Stuurman、Kurt Thorn 主持）</td><td>课程页 &lt;https://www.ibiology.org/online-biology-courses/microscopy-series/&gt;</td></tr>
-<tr><td><strong>官方视频</strong></td><td>iBiology 自己的 YouTube 频道（逐讲发布，带字幕与讲稿）</td><td>&lt;https://www.youtube.com/@scicommlab&gt;</td></tr>
-<tr><td><strong>国内观看</strong></td><td>B站 搬运合辑，70 个分P</td><td>&lt;https://www.bilibili.com/video/BV1e6Ks6CEaJ&gt;</td></tr>
+<thead><tr><th>层</th><th>归属</th><th>地址</th><th>本书的关系</th></tr></thead><tbody>
+<tr><td>原始出品</td><td>iBiology / Science Communication Lab（Ron Vale、Nico Stuurman、Kurt Thorn 主持）</td><td><a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">课程页</a></td><td>内容与讲稿的来源</td></tr>
+<tr><td>官方视频</td><td>iBiology 的 YouTube 频道，逐讲发布</td><td><a href="https://www.youtube.com/@scicommlab">@scicommlab</a></td><td><strong>截图逐帧取自这里</strong></td></tr>
+<tr><td>国内镜像</td><td>B站 搬运合辑（UP 主非官方），70 个分P</td><td><a href="https://www.bilibili.com/video/BV1e6Ks6CEaJ">BV1e6Ks6CEaJ</a></td><td>仅作备用链接；AI 中文字幕来自这里</td></tr>
 </tbody></table></div>
-<p><strong>本书做了什么</strong>：按讲次抓帧、抓 AI 中文字幕，重新组织成 9 章中文笔记，并自己画了 9 张原理图。素材来源说准确一点：</p>
-<ul><li><strong>截图取自 iBiology 的官方视频</strong>（YouTube 频道逐讲发布的 720p 版），逐讲按时间点抽帧；抓的是原片，没有 B站 的烧录中文字幕；</li><li><strong>每章开头列出该章讲次在 iBiology 的官方页</strong>，含英文讲稿与时间轴，可对照原话；</li><li><strong>图注里的秒数默认链到 YouTube 原片</strong>（<code>?t=</code> 直接跳秒），后面跟一个小小的「B站」按钮，切换到国内镜像的同一秒；</li><li><strong>B站 镜像与官方同版本</strong>：实测 36 讲时长逐一对齐（误差 0 秒），所以秒数两边通用；镜像随时可能下架，下架后 YouTube 链接照常；</li><li><strong>唯一例外</strong>：第 07 章的 P25（偏振）前 3 张图，YouTube 版与镜像版的剪辑顺序不同（同一讲，前半段差了几分钟），这三张仍取自镜像，其余 34 讲全部来自原片；</li><li>两者都不可达时，书里的截图与结论仍然完整——那才是这本书的主体。</li></ul>
-<p>权利归属：截图与视频内容 © iBiology，依 CC BY-NC-ND 3.0 用于个人学习；中文解说、章节结构、9 张关系图为本次整理所作，非商业使用。如果版权方认为这里的使用方式不合适，告知即可删除，不必争论。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div>
+<h3 id="哪些是借的-哪些是我的">哪些是借的，哪些是我的</h3>
+<p><strong>借的</strong>：幻灯片画面与讲者影像（187 张截图）、英文讲稿的内容与顺序、课程本身的讲次划分。 <strong>我的</strong>：中文解说与章节结构、9 张用几何/衍射公式算出来重画的原理图、图注里的数值核对、时间点索引、排版与电子书。</p>
+<p>中文文字说明来自 B站 的 AI 翻译字幕，我按原意重写而不是逐句转引，术语按光学行文校正过。</p>
+<h3 id="链接规则">链接规则</h3>
+<ol><li>图注里的时间点默认跳 <strong>YouTube 原片</strong>（<code>?t=</code> 直接到秒）；</li><li>后面的「B站」小按钮切到<strong>国内镜像的同一秒</strong>——36 讲逐一对过时长，误差 0 秒，所以秒数两边通用；</li><li><strong>唯一例外</strong>：第 07 章 P25（偏振）前 3 张图，YouTube 版与镜像版剪辑顺序不同（相差几分钟），这三张取自镜像；链接仍指向同一讲；</li><li>镜像随时可能下架，下架后 YouTube 链接不受影响；两条都断了，书里的截图与结论仍然完整。</li></ol>
+<h3 id="许可与处理方式">许可与处理方式</h3>
+<p>iBiology 的内容按 <strong>CC BY-NC-ND 3.0</strong> 发布：署名、非商业、不改作。本书是个人学习笔记，未用于任何商业用途。 如果版权方或讲者认为这里的使用方式不合适，告知即可删除，不必争论。</p><div class="pager"><span></span><a href="ch01-light.html">01-光与折射 →</a></div>
 <footer class="colophon">
 <p><b>出处</b>：<a href="https://www.ibiology.org/online-biology-courses/microscopy-series/">iBiology Microscopy Series</a>
 （Science Communication Lab）· 官方视频 <a href="https://www.youtube.com/@scicommlab">YouTube</a>——
