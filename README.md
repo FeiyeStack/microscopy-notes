@@ -13,5 +13,5 @@
 ## 素材说明
 
 - 原片：[iBiology Microscopy Series](https://www.ibiology.org/online-biology-courses/microscopy-series/)（Science Communication Lab），官方频道 [YouTube](https://www.youtube.com/@scicommlab)；
-- 国内观看：[B站 搬运合辑 BV1e6Ks6CEaJ](https://www.bilibili.com/video/BV1e6Ks6CEaJ)，本书的截图与回看链接均取自该视频；
+- 本书截图逐帧取自其 YouTube 官方频道；国内镜像：[B站 搬运合辑 BV1e6Ks6CEaJ](https://www.bilibili.com/video/BV1e6Ks6CEaJ)（仅备用链接）；
 - 许可：截图与视频 © iBiology，CC BY-NC-ND 3.0；中文解说、排版、9 张关系图为本次整理所作；仅供个人学习，不做商业使用。
